@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class UnoNoticiasViewController;
+@class MenuView;
 
-@interface UnoNoticiasAppDelegate : UIResponder <UIApplicationDelegate>
+@interface UnoNoticiasAppDelegate : UIResponder <UIApplicationDelegate>{
+    MenuView *menu;
+}
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) UnoNoticiasViewController *viewController;
+-(void) ponerMenu:(UIView *) view;
+-(MenuView *) menu;
 
 @end

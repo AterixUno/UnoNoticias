@@ -7,8 +7,8 @@
 // Prueba
 
 #import "UnoNoticiasAppDelegate.h"
-
 #import "UnoNoticiasViewController.h"
+#import "MenuView.h"
 
 @implementation UnoNoticiasAppDelegate
 
@@ -19,16 +19,23 @@
 {
     [_window release];
     [_viewController release];
+    [menu release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
     self.viewController = [[[UnoNoticiasViewController alloc] initWithNibName:@"UnoNoticiasViewController" bundle:nil] autorelease];
+    
+    menu = [[MenuView alloc] initWithFrame:CGRectMake(0, -748, 1024, 748)];
+    //[menu setCenter:CGPointMake(menu.center.x, -374)];
+    
+    sleep(2);
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -70,5 +77,18 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+-(void) ponerMenu:(UIView *) view{
+    UIView *superView = [menu superview];
+    if (!superView || superView != view){
+        [view addSubview:menu];
+    }
+}
+
+-(MenuView *) menu{
+    return menu;
+}
+
+
 
 @end
