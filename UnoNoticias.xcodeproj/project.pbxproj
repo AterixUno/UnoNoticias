@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0478E2E914E344F9002FD36C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0478E2E814E344F9002FD36C /* UIKit.framework */; };
+		0478E2EB14E344F9002FD36C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0478E2EA14E344F9002FD36C /* Foundation.framework */; };
+		0478E2ED14E344F9002FD36C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0478E2EC14E344F9002FD36C /* CoreGraphics.framework */; };
+		0478E2F314E344F9002FD36C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0478E2F114E344F9002FD36C /* InfoPlist.strings */; };
+		0478E2F514E344F9002FD36C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478E2F414E344F9002FD36C /* main.m */; };
+		0478E2F914E344F9002FD36C /* UnoNoticiasAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478E2F814E344F9002FD36C /* UnoNoticiasAppDelegate.m */; };
+		0478E2FC14E344F9002FD36C /* UnoNoticiasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478E2FB14E344F9002FD36C /* UnoNoticiasViewController.m */; };
+		0478E2FF14E344F9002FD36C /* UnoNoticiasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0478E2FD14E344F9002FD36C /* UnoNoticiasViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0478E2E414E344F9002FD36C /* UnoNoticias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnoNoticias.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0478E2E814E344F9002FD36C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0478E2EA14E344F9002FD36C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0478E2EC14E344F9002FD36C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0478E2F014E344F9002FD36C /* UnoNoticias-Info.plist */ = {isa = PBXFileReference; path = "UnoNoticias-Info.plist"; sourceTree = "<group>"; };
+		0478E2F214E344F9002FD36C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0478E2F414E344F9002FD36C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0478E2F614E344F9002FD36C /* UnoNoticias-Prefix.pch */ = {isa = PBXFileReference; path = "UnoNoticias-Prefix.pch"; sourceTree = "<group>"; };
+		0478E2F714E344F9002FD36C /* UnoNoticiasAppDelegate.h */ = {isa = PBXFileReference; path = UnoNoticiasAppDelegate.h; sourceTree = "<group>"; };
+		0478E2F814E344F9002FD36C /* UnoNoticiasAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnoNoticiasAppDelegate.m; sourceTree = "<group>"; };
+		0478E2FA14E344F9002FD36C /* UnoNoticiasViewController.h */ = {isa = PBXFileReference; path = UnoNoticiasViewController.h; sourceTree = "<group>"; };
+		0478E2FB14E344F9002FD36C /* UnoNoticiasViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnoNoticiasViewController.m; sourceTree = "<group>"; };
+		0478E2FE14E344F9002FD36C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UnoNoticiasViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0478E2E114E344F9002FD36C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0478E2E914E344F9002FD36C /* UIKit.framework in Frameworks */,
+				0478E2EB14E344F9002FD36C /* Foundation.framework in Frameworks */,
+				0478E2ED14E344F9002FD36C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0478E2D914E344F9002FD36C = {
+			isa = PBXGroup;
+			children = (
+				0478E2EE14E344F9002FD36C /* UnoNoticias */,
+				0478E2E714E344F9002FD36C /* Frameworks */,
+				0478E2E514E344F9002FD36C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0478E2E514E344F9002FD36C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0478E2E414E344F9002FD36C /* UnoNoticias.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0478E2E714E344F9002FD36C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0478E2E814E344F9002FD36C /* UIKit.framework */,
+				0478E2EA14E344F9002FD36C /* Foundation.framework */,
+				0478E2EC14E344F9002FD36C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0478E2EE14E344F9002FD36C /* UnoNoticias */ = {
+			isa = PBXGroup;
+			children = (
+				0478E2F714E344F9002FD36C /* UnoNoticiasAppDelegate.h */,
+				0478E2F814E344F9002FD36C /* UnoNoticiasAppDelegate.m */,
+				0478E2FA14E344F9002FD36C /* UnoNoticiasViewController.h */,
+				0478E2FB14E344F9002FD36C /* UnoNoticiasViewController.m */,
+				0478E2FD14E344F9002FD36C /* UnoNoticiasViewController.xib */,
+				0478E2EF14E344F9002FD36C /* Supporting Files */,
+			);
+			path = UnoNoticias;
+			sourceTree = "<group>";
+		};
+		0478E2EF14E344F9002FD36C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0478E2F014E344F9002FD36C /* UnoNoticias-Info.plist */,
+				0478E2F114E344F9002FD36C /* InfoPlist.strings */,
+				0478E2F414E344F9002FD36C /* main.m */,
+				0478E2F614E344F9002FD36C /* UnoNoticias-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0478E2E314E344F9002FD36C /* UnoNoticias */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0478E30214E344F9002FD36C /* Build configuration list for PBXNativeTarget "UnoNoticias" */;
+			buildPhases = (
+				0478E2E014E344F9002FD36C /* Sources */,
+				0478E2E114E344F9002FD36C /* Frameworks */,
+				0478E2E214E344F9002FD36C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnoNoticias;
+			productName = UnoNoticias;
+			productReference = 0478E2E414E344F9002FD36C /* UnoNoticias.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0478E2DB14E344F9002FD36C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Freezecode;
+			};
+			buildConfigurationList = 0478E2DE14E344F9002FD36C /* Build configuration list for PBXProject "UnoNoticias" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0478E2D914E344F9002FD36C;
+			productRefGroup = 0478E2E514E344F9002FD36C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0478E2E314E344F9002FD36C /* UnoNoticias */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0478E2E214E344F9002FD36C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0478E2F314E344F9002FD36C /* InfoPlist.strings in Resources */,
+				0478E2FF14E344F9002FD36C /* UnoNoticiasViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0478E2E014E344F9002FD36C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0478E2F514E344F9002FD36C /* main.m in Sources */,
+				0478E2F914E344F9002FD36C /* UnoNoticiasAppDelegate.m in Sources */,
+				0478E2FC14E344F9002FD36C /* UnoNoticiasViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0478E2F114E344F9002FD36C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0478E2F214E344F9002FD36C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0478E2FD14E344F9002FD36C /* UnoNoticiasViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0478E2FE14E344F9002FD36C /* en */,
+			);
+			name = UnoNoticiasViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0478E30014E344F9002FD36C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		0478E30114E344F9002FD36C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0478E30314E344F9002FD36C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnoNoticias/UnoNoticias-Prefix.pch";
+				INFOPLIST_FILE = "UnoNoticias/UnoNoticias-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0478E30414E344F9002FD36C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnoNoticias/UnoNoticias-Prefix.pch";
+				INFOPLIST_FILE = "UnoNoticias/UnoNoticias-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0478E2DE14E344F9002FD36C /* Build configuration list for PBXProject "UnoNoticias" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0478E30014E344F9002FD36C /* Debug */,
+				0478E30114E344F9002FD36C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0478E30214E344F9002FD36C /* Build configuration list for PBXNativeTarget "UnoNoticias" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0478E30314E344F9002FD36C /* Debug */,
+				0478E30414E344F9002FD36C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0478E2DB14E344F9002FD36C /* Project object */;
+}
