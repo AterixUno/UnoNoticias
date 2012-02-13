@@ -15,7 +15,7 @@
 @interface UnoNoticiasViewController : UIViewController{
     BOOL primeraVes;
     MenuView *menu;
-    NoticiaCompletaView *noticia;
+    //NoticiaCompletaView *noticia;
 }
 
 @property (retain, nonatomic) IBOutlet UIImageView *imgDrag;

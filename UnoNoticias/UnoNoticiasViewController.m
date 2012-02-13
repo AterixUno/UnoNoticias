@@ -12,6 +12,7 @@
 #import "MenuView.h"
 #import "NoticiaCompletaView.h"
 #import "BarraClimaView.h"
+#import "BotonSeccionaNoticaView.h"
 
 @implementation UnoNoticiasViewController
 @synthesize imgDrag,scrollNoticias,barraClima;
@@ -47,9 +48,15 @@
     
     [scrollNoticias setContentSize:CGSizeMake(scrollNoticias.frame.size.width, scrollNoticias.frame.size.height*2)];
     
-    noticia = [[NoticiaCompletaView alloc] init];
+    /*noticia = [[NoticiaCompletaView alloc] init];
     [scrollNoticias addSubview:noticia];
-    [noticia actualizarVista];
+    [noticia actualizarVista];*/
+    
+    BotonSeccionaNoticaView *noticia =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(0, 0, scrollNoticias.frame.size.width/2, scrollNoticias.frame.size.height) Fuente:@"Fuente: EFE"];
+    [noticia setBackgroundColor:[UIColor yellowColor]];
+    [scrollNoticias addSubview:noticia];
+    [noticia release];
+    noticia = nil;
     
 }
 
@@ -178,8 +185,8 @@
     [scrollNoticias release];
     scrollNoticias = nil;
     
-    [noticia release];
-    noticia = nil;
+    /*[noticia release];
+    noticia = nil;*/
     
     [barraClima release];
     barraClima = nil;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0455CA1A14E998130008CD0E /* BotonSeccionaNoticaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455CA1914E998130008CD0E /* BotonSeccionaNoticaView.m */; };
 		0478E2E914E344F9002FD36C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0478E2E814E344F9002FD36C /* UIKit.framework */; };
 		0478E2EB14E344F9002FD36C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0478E2EA14E344F9002FD36C /* Foundation.framework */; };
 		0478E2ED14E344F9002FD36C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0478E2EC14E344F9002FD36C /* CoreGraphics.framework */; };
@@ -126,6 +127,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0455CA1814E998130008CD0E /* BotonSeccionaNoticaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotonSeccionaNoticaView.h; sourceTree = "<group>"; };
+		0455CA1914E998130008CD0E /* BotonSeccionaNoticaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotonSeccionaNoticaView.m; sourceTree = "<group>"; };
 		0478E2E414E344F9002FD36C /* UnoNoticias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnoNoticias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0478E2E814E344F9002FD36C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0478E2EA14E344F9002FD36C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -319,6 +322,8 @@
 				0479CF7E14E42A5F00A61B50 /* BotonNoticiaView.h */,
 				0479CF7F14E42A5F00A61B50 /* BotonNoticiaView.m */,
 				0478E2EF14E344F9002FD36C /* Supporting Files */,
+				0455CA1814E998130008CD0E /* BotonSeccionaNoticaView.h */,
+				0455CA1914E998130008CD0E /* BotonSeccionaNoticaView.m */,
 			);
 			path = UnoNoticias;
 			sourceTree = "<group>";
@@ -665,6 +670,7 @@
 				0479CF7A14E42A5700A61B50 /* ConfiguracionViewController.m in Sources */,
 				0479CF8014E42A5F00A61B50 /* BarraClimaView.m in Sources */,
 				0479CF8114E42A5F00A61B50 /* BotonNoticiaView.m in Sources */,
+				0455CA1A14E998130008CD0E /* BotonSeccionaNoticaView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
