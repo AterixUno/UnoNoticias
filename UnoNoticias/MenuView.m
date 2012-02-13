@@ -123,6 +123,8 @@
         [lblPortada setTextColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:1]];
         [viewContenedor addSubview:lblPortada];
         
+        //Agregando un comentario para probar el git ignore
+        
         lblFecha = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 320, 495, 320, 41)];
         [lblFecha setText:@"México D.F., viernes 20 de Enero 2012"];
         [lblFecha setFont:[Constantes HelveticaNueCondensed:16]];
