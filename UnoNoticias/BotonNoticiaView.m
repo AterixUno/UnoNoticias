@@ -48,6 +48,7 @@
 -(void) setTipoNoticia:(NSString *) noticia{
     [lblTipoNoticia setText:noticia];
 }
+
 -(void) setResumenNoticia:(NSString *) resumen{
     [lblResumen setText:resumen];
 }
