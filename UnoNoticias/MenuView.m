@@ -8,6 +8,7 @@
 
 #import "MenuView.h"
 #import "BotonNoticiaView.h"
+#import "Constantes.h"
 
 @implementation MenuView
 @synthesize delegate;
@@ -22,7 +23,7 @@
         
         viewContenedor = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height - 540,frame.size.width , 540)];
         [viewContenedor setUserInteractionEnabled:TRUE];
-        [viewContenedor setBackgroundColor:[UIColor blueColor]];
+        [viewContenedor setBackgroundColor:[UIColor whiteColor]];
         [self addSubview:viewContenedor];
         
         txtBuscar = [[UITextField alloc] initWithFrame:CGRectMake(20, 20, 220, 20)];
@@ -33,7 +34,9 @@
         [btnNacional setTipoNoticia:@"NACIONAL"];
         [btnNacional setResumenNoticia:@"Debatiré con candidatos, no con aspirantes: EPN"];
         [btnNacional setTag:50];
-        [viewContenedor addSubview:btnNacional];
+        [btnNacional setImgFondo:[UIImage imageNamed:@"fondo1.png"]];
+        [btnNacional setImgNoticia:[UIImage imageNamed:@"nacionalmenu.jpg"]];
+        [viewContenedor addSubview:btnNacional];    
         [btnNacional release];
         btnNacional = nil;
         
@@ -41,6 +44,8 @@
         [btnInternacional setTipoNoticia:@"INTERNACIONAL"];
         [btnInternacional setResumenNoticia:@"Suspenden de nuevo, búsqueda de desaparecidos"];
         [btnInternacional setTag:51];
+        [btnInternacional setImgFondo:[UIImage imageNamed:@"fondo2.png"]];
+        [btnInternacional setImgNoticia:[UIImage imageNamed:@"internacionalmenu.jpg"]];
         [viewContenedor addSubview:btnInternacional];
         [btnInternacional release];
         btnInternacional = nil;
@@ -49,38 +54,48 @@
         [btnFinanzas setTipoNoticia:@"FINANZAS"];
         [btnFinanzas setResumenNoticia:@"Dólar se vende hasta en $13.60 en el AICM"];
         [btnFinanzas setTag:52];
+        [btnFinanzas setImgFondo:[UIImage imageNamed:@"fondo3.png"]];
+        [btnFinanzas setImgNoticia:[UIImage imageNamed:@"finanzasmenu.jpg"]];
         [viewContenedor addSubview:btnFinanzas];
         [btnFinanzas release];
         btnFinanzas = nil;
         
-        BotonNoticiaView *btnDeportes = [[BotonNoticiaView alloc] initWithFrame:CGRectMake(20, 270, 220, 225)];
+        BotonNoticiaView *btnDeportes = [[BotonNoticiaView alloc] initWithFrame:CGRectMake(290, 270, 220, 225)];
         [btnDeportes setTipoNoticia:@"DEPORTES"];
         [btnDeportes setResumenNoticia:@"Melissa Torres ¿Existe la maldicón del grand Slam?"];
-        [btnDeportes setTag:50];
+        [btnDeportes setTag:53];
+        [btnDeportes setImgFondo:[UIImage imageNamed:@"fondo4.png"]];
+        [btnDeportes setImgNoticia:[UIImage imageNamed:@"deportesmenu.jpg"]];
         [viewContenedor addSubview:btnDeportes];
         [btnDeportes release];
         btnDeportes = nil;
         
-        BotonNoticiaView *btnEspectacilos = [[BotonNoticiaView alloc] initWithFrame:CGRectMake(290, 270, 220, 225)];
-        [btnEspectacilos setTipoNoticia:@"ESPECTACULOS"];
-        [btnEspectacilos setResumenNoticia:@"Médico de Jackson no pagará restitución a familiares"];
-        [btnEspectacilos setTag:50];
-        [viewContenedor addSubview:btnEspectacilos];
-        [btnEspectacilos release];
-        btnEspectacilos = nil;
+        BotonNoticiaView *btnEspectaculos = [[BotonNoticiaView alloc] initWithFrame:CGRectMake(530, 270, 220, 225)];
+        [btnEspectaculos setTipoNoticia:@"ESPECTACULOS"];
+        [btnEspectaculos setResumenNoticia:@"Médico de Jackson no pagará restitución a familiares"];
+        [btnEspectaculos setTag:54];
+        [btnEspectaculos setImgFondo:[UIImage imageNamed:@"fondo1.png"]];
+        [btnEspectaculos setImgNoticia:[UIImage imageNamed:@"ewspectaculosmenu.jpg"]];
+        [viewContenedor addSubview:btnEspectaculos];
+        [btnEspectaculos release];
+        btnEspectaculos = nil;
         
-        BotonNoticiaView *btnAlgoBueno = [[BotonNoticiaView alloc] initWithFrame:CGRectMake(530, 270, 220, 225)];
+        BotonNoticiaView *btnAlgoBueno = [[BotonNoticiaView alloc] initWithFrame:CGRectMake(770, 270, 220, 225)];
         [btnAlgoBueno setTipoNoticia:@"ALGO BUENO QUE CONTAR"];
         [btnAlgoBueno setResumenNoticia:@"Debatiré con candidatos, no con aspirantes: EPN"];
-        [btnAlgoBueno setTag:50];
+        [btnAlgoBueno setTag:55];
+        [btnAlgoBueno setImgFondo:[UIImage imageNamed:@"fondo2.png"]];
+        [btnAlgoBueno setImgNoticia:[UIImage imageNamed:@"algobuenomenu.jpg"]];
         [viewContenedor addSubview:btnAlgoBueno];
         [btnAlgoBueno release];
         btnAlgoBueno = nil;
         
-        BotonNoticiaView *btnDenuncia = [[BotonNoticiaView alloc] initWithFrame:CGRectMake(770, 270, 220, 225)];
+        BotonNoticiaView *btnDenuncia = [[BotonNoticiaView alloc] initWithFrame:CGRectMake(20, 270, 220, 225)];
         [btnDenuncia setTipoNoticia:@"DENUNCIA"];
         [btnDenuncia setResumenNoticia:@"Bache en periferico causa accidente"];
-        [btnDenuncia setTag:50];
+        [btnDenuncia setTag:56];
+        [btnDenuncia setImgFondo:[UIImage imageNamed:@"fondo4.png"]];
+        [btnDenuncia setImgNoticia:[UIImage imageNamed:@"denunciamenu.jpg"]];
         [viewContenedor addSubview:btnDenuncia];
         [btnDenuncia release];
         btnDenuncia = nil;
@@ -100,10 +115,23 @@
         [btnConfiguracion setTitle:@"Configuración" forState:UIControlStateNormal];
         [viewContenedor addSubview:btnConfiguracion];
         
+        lblPortada = [[UILabel alloc] initWithFrame:CGRectMake(0, 495, self.frame.size.width, 41)];
+        [lblPortada setText:@"               PORTADA"];
+        [lblPortada setFont:[Constantes HelveticaNueCondensed:22]];
+        [lblPortada setNumberOfLines:1];
+        [lblPortada setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
+        [lblPortada setTextColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:1]];
+        [viewContenedor addSubview:lblPortada];
         
-        
+        lblFecha = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 320, 495, 320, 41)];
+        [lblFecha setText:@"México D.F., viernes 20 de Enero 2012"];
+        [lblFecha setFont:[Constantes HelveticaNueCondensed:16]];
+        [lblFecha setNumberOfLines:1];
+        [lblFecha setBackgroundColor:[UIColor clearColor]];
+        [lblFecha setTextColor:[UIColor colorWithRed:0.59608 green:0.59608 blue:0.59608 alpha:1]];
+        [viewContenedor addSubview:lblFecha];
     }
-    return self;
+    return self; 
 }
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -137,6 +165,8 @@
     viewContenedor = nil;
     [txtBuscar release];
     txtBuscar = nil;
+    [lblPortada release];
+    lblPortada = nil;
     
     delegate = nil;
     [super dealloc];

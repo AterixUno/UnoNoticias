@@ -14,6 +14,8 @@
 
     UIView *viewContenedor;
     UITextField *txtBuscar;
+    UILabel *lblPortada;
+    UILabel *lblFecha;
     
 }
 

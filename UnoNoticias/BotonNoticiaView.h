@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BotonNoticiaView : UIView
-{
+@interface BotonNoticiaView : UIView{
 
-    UIImageView *imgFondo;
+    UIImageView *imgFondo; /* Variable de tipo UIImageview que se guarda en una dirección de memoria por eso el * */
     UIImageView *imgnoticia;
     UILabel *lblTipoNoticia;
     UILabel *lblResumen;
@@ -20,5 +19,7 @@
 
 -(void) setTipoNoticia:(NSString *) noticia;
 -(void) setResumenNoticia:(NSString *) resumen;
+-(void) setImgFondo:(UIImage *) fondo;
+-(void) setImgNoticia:(UIImage *) noticia;
 
 @end

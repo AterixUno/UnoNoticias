@@ -7,33 +7,38 @@
 //
 
 #import "BotonNoticiaView.h"
+#import "Constantes.h"
 
 @implementation BotonNoticiaView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame /* icializa esta clase con un frame */
 {
     self = [super initWithFrame:frame];
     if (self) {
         
         imgFondo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0,frame.size.width, frame.size.height)];
-        [imgFondo setBackgroundColor:[UIColor yellowColor]];
+        [imgFondo setContentMode:UIViewContentModeBottomRight];
         [self addSubview:imgFondo];
         
-        imgnoticia = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 146)];
-        [imgnoticia setBackgroundColor:[UIColor purpleColor]];
+        imgnoticia = [[UIImageView alloc] init];
+        [imgnoticia setContentMode:UIViewContentModeTop];
         [self addSubview:imgnoticia];
         
         lblTipoNoticia = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, frame.size.width - 30, 15)];
-        [lblTipoNoticia setText:@"Noticia"];
-        [lblTipoNoticia setFont:[UIFont fontWithName:@"Arial" size:20]];
+        [lblTipoNoticia setText:@""];
+        [lblTipoNoticia setFont:[Constantes HelveticaNueCondensed:22]];
         [lblTipoNoticia setBackgroundColor:[UIColor clearColor]];
+        [lblTipoNoticia setTextColor:[UIColor blackColor]];
+        [lblTipoNoticia setShadowColor:[UIColor colorWithRed:0.73725 green:0.69804 blue:0.69804 alpha:1]];
+        [lblTipoNoticia setShadowOffset:CGSizeMake(1, 1)];
         [self addSubview:lblTipoNoticia];
         
         lblResumen = [[UILabel alloc] initWithFrame:CGRectMake(10, 170, frame.size.width - 30, 45)];
-        [lblResumen setText:@"Bache en periferico causa un accidente"];
-        [lblResumen setFont:[UIFont fontWithName:@"Arial" size:15]];
+        [lblResumen setText:@""];
+        [lblResumen setFont:[Constantes HelveticaNueCondensed:16]];
         [lblResumen setNumberOfLines:2];
         [lblResumen setBackgroundColor:[UIColor clearColor]];
+        [lblResumen setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
         [self addSubview:lblResumen];
         
     }
@@ -46,6 +51,16 @@
 -(void) setResumenNoticia:(NSString *) resumen{
     [lblResumen setText:resumen];
 }
+
+-(void) setImgFondo:(UIImage *) fondo{
+    [imgFondo setImage:fondo];
+}
+
+-(void) setImgNoticia:(UIImage *) noticia{
+    [imgnoticia setImage:noticia];
+    [imgnoticia setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+}
+
 
 -(void) dealloc{
 
