@@ -52,11 +52,28 @@
     [scrollNoticias addSubview:noticia];
     [noticia actualizarVista];*/
     
-    BotonSeccionaNoticaView *noticia =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(0, 0, scrollNoticias.frame.size.width*3/5, scrollNoticias.frame.size.height) Fuente:@"Fuente: EFE"];
-    [noticia setBackgroundColor:[UIColor yellowColor]];
+    BotonSeccionaNoticaView *noticia =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(0, 0, scrollNoticias.frame.size.width*3/5, scrollNoticias.frame.size.height) Fuente:@"Fuente: EFE" Foto:[UIImage imageNamed:@"concordiaMediano.jpg"]];
+    [noticia setBackgroundColor:[UIColor clearColor]];
     [scrollNoticias addSubview:noticia];
     [noticia release];
     noticia = nil;
+
+    BotonSeccionaNoticaView *noticia1 =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(scrollNoticias.frame.size.width*3/5, 0, scrollNoticias.frame.size.width*2/5, scrollNoticias.frame.size.height/2) Fuente:nil Foto:[UIImage imageNamed:@"energiaautosustentable.jpg"]];
+    [noticia1 setBackgroundColor:[UIColor clearColor]];
+    [noticia1 setTipoNoticia:@"NACIONAL"];
+    [noticia1 setTitulo:@"México transita hacia la energía autosustentable: Sener"];
+    [noticia1 setNoticia:@"El secreatrio de economía aseguró qeu el programa implementado por FCH, alcanzará su objetivo en "];
+    [noticia1 setComentarios:@"7"];
+    [noticia1 setTamano:26];
+    [scrollNoticias addSubview:noticia1];
+    [noticia1 release];
+    noticia1 = nil;
+
+    /*BotonSeccionaNoticaView *noticia2 =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(scrollNoticias.frame.size.width*3/5, scrollNoticias.frame.size.height/2, scrollNoticias.frame.size.width*2/5, scrollNoticias.frame.size.height/2) Fuente:nil];
+    [noticia2 setBackgroundColor:[UIColor clearColor]];
+    [scrollNoticias addSubview:noticia2];
+    [noticia2 release];
+    noticia2 = nil;*/
     
     [barraClima setDelegate:self];
 }

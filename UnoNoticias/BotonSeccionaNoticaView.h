@@ -15,8 +15,15 @@
     UILabel *lblComentarios;
     UILabel *lblNoticia;
     UIImageView *imgNoticia;
+    UIImageView *imgComentarios;
 }
 
--(id) initWithFrame:(CGRect)frame Fuente:(NSString *) strFuente;
+-(id) initWithFrame:(CGRect)frame Fuente:(NSString *) strFuente Foto:(UIImage *) foto;
+-(void) setTipoNoticia:(NSString *) tipoNoticia;
+-(void) setTitulo:(NSString *) titulo;
+-(void) setComentarios:(NSString *) comentarios;
+-(void) setNoticia:(NSString *) noticia;
+-(void) setFoto:(UIImage *) foto;
+-(void) setTamano:(NSInteger) tamano;
 
 @end
