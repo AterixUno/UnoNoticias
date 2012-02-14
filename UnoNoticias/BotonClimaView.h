@@ -22,5 +22,5 @@
 -(void) setFecha:(NSString *) fecha;
 -(void) setCiudad:(NSString *) ciudad;
 -(void) setFondo:(UIImage *) fondo;
-
+-(void) btnCerrarClic;
 @end

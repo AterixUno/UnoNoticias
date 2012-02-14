@@ -25,13 +25,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
     self.viewController = [[[UnoNoticiasViewController alloc] initWithNibName:@"UnoNoticiasViewController" bundle:nil] autorelease];
-    
-    menu = [[MenuView alloc] initWithFrame:CGRectMake(0, -748, 1024, 748)];
-    //[menu setCenter:CGPointMake(menu.center.x, -374)];
-    
-    sleep(2);
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
@@ -86,6 +83,14 @@
 }
 
 -(MenuView *) menu{
+    
+    if (!menu){
+        CGRect frame;
+        frame = self.viewController.view.frame;
+        frame.origin.y=-frame.size.height;
+        menu = [[MenuView alloc] initWithFrame:frame];
+    }
+    
     return menu;
 }
 

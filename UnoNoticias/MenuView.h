@@ -23,6 +23,7 @@
 
 -(void) showMenu;
 -(void) hideMenu;
+-(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 
 @end
 
