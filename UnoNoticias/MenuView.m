@@ -18,8 +18,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3]];
-        [self setAutoresizesSubviews:YES];
-        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleWidth];
         
         viewContenedor = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height - 540,frame.size.width , 540)];
         [viewContenedor setUserInteractionEnabled:TRUE];
@@ -157,7 +155,21 @@
 
 }
 
+-(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    
+    switch (toInterfaceOrientation) {
+        case UIInterfaceOrientationLandscapeLeft:case UIInterfaceOrientationLandscapeRight:
+            
+            break;
+            
+        case UIInterfaceOrientationPortrait: case UIInterfaceOrientationPortraitUpsideDown:
+            break;
+            
+        default:
+            break;
+    }
 
+}
 
 -(void) dealloc{
     

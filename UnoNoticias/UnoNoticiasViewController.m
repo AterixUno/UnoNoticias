@@ -203,6 +203,23 @@
     
 }
 
+-(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    
+    switch (toInterfaceOrientation) {
+        case UIInterfaceOrientationLandscapeLeft:case UIInterfaceOrientationLandscapeRight:
+                
+            break;
+            
+        case UIInterfaceOrientationPortrait: case UIInterfaceOrientationPortraitUpsideDown:
+            break;
+            
+        default:
+            break;
+    }
+    
+    [menu willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+}
+
 -(void) dealloc{
     
     [imgDrag release];
