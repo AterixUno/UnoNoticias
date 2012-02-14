@@ -179,11 +179,27 @@
 }
 
 -(void) barraClimaClic:(BarraClimaView *) _barraClima{
-    ClimaView *climaView = [[ClimaView alloc] initWithFrame:CGRectMake(_barraClima.frame.origin.x+15,_barraClima.frame.origin.y - 367, 407 , 367)];
-    [climaView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin];
-    [self.view addSubview:climaView];
-    [climaView release];
-    climaView = nil;
+    ClimaView *climaView;
+    
+    climaView = (ClimaView *)[[self view] viewWithTag:100];
+    
+    if (climaView){
+        
+        [climaView removeFromSuperview];
+        
+    }
+        
+    else{
+    
+        climaView = [[ClimaView alloc] initWithFrame:CGRectMake(_barraClima.frame.origin.x+15,_barraClima.frame.origin.y - 367, 407 , 367)];
+        [climaView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin];
+        [climaView setTag:100];
+        [self.view addSubview:climaView];
+        [climaView release];
+        climaView = nil;
+    
+    }
+
     
 }
 

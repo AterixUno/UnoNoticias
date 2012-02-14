@@ -11,6 +11,7 @@
 @interface ClimaView : UIView{
 
     UILabel *lblFecha;
+    UIButton *btnCerrar;
 
 }
 

@@ -34,11 +34,11 @@
         lblTitulo = nil;
         
         UIImageView *imgBusqueda = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"busquedaclima.png"]];
-        [imgBusqueda setFrame:CGRectMake(5, 45, imgBusqueda.frame.size.width, imgBusqueda.frame.size.height)];
+        [imgBusqueda setFrame:CGRectMake(10, 45, imgBusqueda.frame.size.width, imgBusqueda.frame.size.height)];
         [self addSubview:imgBusqueda];
         
         lblFecha = [[UILabel alloc] initWithFrame:CGRectMake(imgBusqueda.frame.size.width+imgBusqueda.frame.origin.x, imgBusqueda.frame.origin.y, frame.size.width-imgBusqueda.frame.size.width-imgBusqueda.frame.origin.x, imgBusqueda.frame.size.height)];
-        [lblFecha setText:@"Lunes 13 de Febrero, 2012  "];
+        [lblFecha setText:@"Martes 14 de Febrero, 2012  "];
         [lblFecha setBackgroundColor:[UIColor clearColor]];
         [lblFecha setFont:[Constantes HelveticaNueCondensed:13]];
         [lblFecha setTextColor:[UIColor colorWithRed:0.27843137 green:0.27843137 blue:0.27843137 alpha:1]];
@@ -88,9 +88,11 @@
         dia3 = nil;
         
 
+        UIImage *imgElegir = [UIImage imageNamed:@"botonelegirciudad.png"];
         
-        UIImageView *btnElegirCiudad = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"botonelegirciudad.png"]];
-        [btnElegirCiudad setFrame:CGRectMake(15, dia4.frame.origin.y + dia4.frame.size.height+5, btnElegirCiudad.frame.size.width, btnElegirCiudad.frame.size.height)];
+        UIButton *btnElegirCiudad = [[UIButton alloc] initWithFrame:CGRectMake(15, dia4.frame.origin.y + dia4.frame.size.height+5, imgElegir.size.width,imgElegir.size.height)];
+        [btnElegirCiudad setImage:imgElegir forState:UIControlStateNormal];
+        [btnElegirCiudad setContentMode:UIViewContentModeCenter];
         [self addSubview:btnElegirCiudad];
         [btnElegirCiudad release];
         btnElegirCiudad = nil;
@@ -98,10 +100,21 @@
         [dia4 release];
         dia4 = nil;
         
+        btnCerrar = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width-40, -15, 50, 50)];
+        [btnCerrar setImage:[UIImage imageNamed:@"cerrar.png"] forState:UIControlStateNormal];
+        [btnCerrar setContentMode:UIViewContentModeTop];
+        [btnCerrar addTarget:self action:@selector(btnCerrarClic) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:btnCerrar];
+        
     }
     return self;
 }
 
+-(void) btnCerrarClic{
+    
+    [self removeFromSuperview];
+
+}
 - (void)drawRect:(CGRect)rect{
     
     [super drawRect:rect];
@@ -150,19 +163,15 @@
     CGContextDrawPath(context, kCGPathFillStroke);
     
     */
-    
 
-    
-}
-
--(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-
-    [self removeFromSuperview];
 }
 
 -(void) dealloc{
     [lblFecha release];
     lblFecha = nil;
+    
+    [btnCerrar release];
+    btnCerrar = nil;
     [super dealloc];
 }
 
