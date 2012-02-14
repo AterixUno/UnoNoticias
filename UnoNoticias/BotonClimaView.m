@@ -34,7 +34,7 @@
         lblFecha = [[UILabel alloc] initWithFrame:CGRectMake(104, 0, 115, 52)];
         [lblFecha setText:@""];
         [lblFecha setFont:[Constantes HelveticaNue:21]];
-        [lblFecha setTextColor:[UIColor colorWithRed:0.42745098 green:0.4156 blue:0.4151 alpha:1]];
+        [lblFecha setTextColor:[UIColor colorWithRed:0.1019 green:0.4588 blue:0.73333 alpha:1]];
         [lblFecha setBackgroundColor:[UIColor clearColor]];
         [lblFecha setTextAlignment:UITextAlignmentCenter];
         [self addSubview:lblFecha];
@@ -56,6 +56,27 @@
 - (void)drawRect:(CGRect)rect{
     
     [super drawRect:rect];
+    
+
+    float strokeWidth = 1.0;
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetLineWidth(context, strokeWidth);   
+    
+    CGContextBeginPath(context);
+    
+    CGContextMoveToPoint(context, rect.origin.x + 5, rect.size.height-2);
+
+    CGContextAddLineToPoint(context, rect.size.width - 5, rect.size.height-2);
+    
+    CGContextClosePath(context);
+    
+    [[UIColor whiteColor] setFill];
+    [[UIColor colorWithRed:0.7960 green:0.7960 blue:0.7960 alpha:1] setStroke];
+    
+    CGContextDrawPath(context, kCGPathFillStroke);
+    
     
 }
 
