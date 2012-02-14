@@ -55,7 +55,7 @@
         lblTituloNoticia = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.frame.size.width, 180)];
         [lblTituloNoticia setTextAlignment:UITextAlignmentCenter];
         [lblTituloNoticia setNumberOfLines:0];
-        [lblTituloNoticia setFont:[Constantes HelveticaNue:48]];
+        [lblTituloNoticia setFont:[Constantes HelveticaNue:52]];
         [lblTituloNoticia setBackgroundColor:[UIColor clearColor]];
         [lblTituloNoticia setShadowColor:[UIColor colorWithRed:0.72549 green:0.69804 blue:0.69804 alpha:1]];
         [lblTituloNoticia setShadowOffset:CGSizeMake(1, 1)];

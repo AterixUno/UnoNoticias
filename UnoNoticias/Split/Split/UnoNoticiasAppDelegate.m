@@ -1,41 +1,45 @@
 //
 //  UnoNoticiasAppDelegate.m
-//  UnoNoticias
+//  Split
 //
-//  Created by Miguel Cubillos on 08/02/12.
+//  Created by Miguel Cubillos on 14/02/12.
 //  Copyright (c) 2012 Freezecode. All rights reserved.
-// Prueba
+//
 
 #import "UnoNoticiasAppDelegate.h"
-#import "UnoNoticiasViewController.h"
-#import "MenuView.h"
+
+#import "UnoNoticiasMasterViewController.h"
+
+#import "UnoNoticiasDetailViewController.h"
 
 @implementation UnoNoticiasAppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize splitViewController = _splitViewController;
 
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
-    [menu release];
+    [_splitViewController release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    
-    self.viewController = [[[UnoNoticiasViewController alloc] initWithNibName:@"UnoNoticiasViewController" bundle:nil] autorelease];
-    
-    self.window.rootViewController = self.viewController;
+    // Override point for customization after application launch.
+
+    UnoNoticiasMasterViewController *masterViewController = [[[UnoNoticiasMasterViewController alloc] initWithNibName:@"UnoNoticiasMasterViewController" bundle:nil] autorelease];
+    UINavigationController *masterNavigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
+
+    UnoNoticiasDetailViewController *detailViewController = [[[UnoNoticiasDetailViewController alloc] initWithNibName:@"UnoNoticiasDetailViewController" bundle:nil] autorelease];
+    UINavigationController *detailNavigationController = [[[UINavigationController alloc] initWithRootViewController:detailViewController] autorelease];
+
+    self.splitViewController = [[[UISplitViewController alloc] init] autorelease];
+    self.splitViewController.delegate = detailViewController;
+    self.splitViewController.viewControllers = [NSArray arrayWithObjects:masterNavigationController, detailNavigationController, nil];
+    self.window.rootViewController = self.splitViewController;
     [self.window makeKeyAndVisible];
-    
-    NSLog(@"%@",[UIFont familyNames]);
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:TRUE];
     
     return YES;
 }
@@ -78,26 +82,5 @@
      See also applicationDidEnterBackground:.
      */
 }
-
--(void) ponerMenu:(UIView *) view{
-    UIView *superView = [menu superview];
-    if (!superView || superView != view){
-        [view addSubview:menu];
-    }
-}
-
--(MenuView *) menu{
-    
-    if (!menu){
-        CGRect frame;
-        frame = self.viewController.view.frame;
-        frame.origin.y=-frame.size.height;
-        menu = [[MenuView alloc] initWithFrame:frame];
-    }
-    
-    return menu;
-}
-
-
 
 @end

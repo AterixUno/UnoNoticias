@@ -67,6 +67,8 @@
 		0455CA9014E9B0400008CD0E /* BankGothic Md BT Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0455CA8F14E9B0400008CD0E /* BankGothic Md BT Medium.ttf */; };
 		0455CA9214E9C7250008CD0E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0455CA9114E9C71E0008CD0E /* Default.png */; };
 		0455CA9514E9C81E0008CD0E /* BotonClimaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455CA9414E9C81E0008CD0E /* BotonClimaView.m */; };
+		0476742514EB0254006E2406 /* NoticiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0476742314EB0254006E2406 /* NoticiaViewController.m */; };
+		0476742614EB0254006E2406 /* NoticiaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0476742414EB0254006E2406 /* NoticiaViewController.xib */; };
 		0478E2E914E344F9002FD36C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0478E2E814E344F9002FD36C /* UIKit.framework */; };
 		0478E2EB14E344F9002FD36C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0478E2EA14E344F9002FD36C /* Foundation.framework */; };
 		0478E2ED14E344F9002FD36C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0478E2EC14E344F9002FD36C /* CoreGraphics.framework */; };
@@ -248,6 +250,9 @@
 		0455CA9114E9C71E0008CD0E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0455CA9314E9C81D0008CD0E /* BotonClimaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotonClimaView.h; sourceTree = "<group>"; };
 		0455CA9414E9C81E0008CD0E /* BotonClimaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotonClimaView.m; sourceTree = "<group>"; };
+		0476742214EB0254006E2406 /* NoticiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiaViewController.h; sourceTree = "<group>"; };
+		0476742314EB0254006E2406 /* NoticiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiaViewController.m; sourceTree = "<group>"; };
+		0476742414EB0254006E2406 /* NoticiaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticiaViewController.xib; sourceTree = "<group>"; };
 		0478E2E414E344F9002FD36C /* UnoNoticias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnoNoticias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0478E2E814E344F9002FD36C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0478E2EA14E344F9002FD36C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -519,6 +524,9 @@
 				0455CA8C14E9AA180008CD0E /* ClimaView.m */,
 				0455CA9314E9C81D0008CD0E /* BotonClimaView.h */,
 				0455CA9414E9C81E0008CD0E /* BotonClimaView.m */,
+				0476742214EB0254006E2406 /* NoticiaViewController.h */,
+				0476742314EB0254006E2406 /* NoticiaViewController.m */,
+				0476742414EB0254006E2406 /* NoticiaViewController.xib */,
 			);
 			path = UnoNoticias;
 			sourceTree = "<group>";
@@ -902,6 +910,7 @@
 				0455CA8A14E9A4F40008CD0E /* HelveticaNeueLTStd-XBlkCn.otf in Resources */,
 				0455CA9014E9B0400008CD0E /* BankGothic Md BT Medium.ttf in Resources */,
 				0455CA9214E9C7250008CD0E /* Default.png in Resources */,
+				0476742614EB0254006E2406 /* NoticiaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +933,7 @@
 				0455CA1A14E998130008CD0E /* BotonSeccionaNoticaView.m in Sources */,
 				0455CA8D14E9AA180008CD0E /* ClimaView.m in Sources */,
 				0455CA9514E9C81E0008CD0E /* BotonClimaView.m in Sources */,
+				0476742514EB0254006E2406 /* NoticiaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
