@@ -48,7 +48,7 @@
         [lblTituloNoticia setText:@"Suspenden de nuevo búsqueda de desaparecidos en crucero"];
         [lblTituloNoticia setTextAlignment:UITextAlignmentCenter];
         [lblTituloNoticia setNumberOfLines:0];
-        [lblTituloNoticia setFont:[Constantes HelveticaNue:48]];
+        [lblTituloNoticia setFont:[Constantes HelveticaNue:52]];
         [lblTituloNoticia setBackgroundColor:[UIColor clearColor]];
         [lblTituloNoticia setShadowOffset:CGSizeMake(1, 1)];
         [lblTituloNoticia setTextColor:[UIColor blackColor]];

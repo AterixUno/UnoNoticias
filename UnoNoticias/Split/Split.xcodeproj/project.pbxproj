@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		049D31DF14EB14EE00780F2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049D31DE14EB14EE00780F2F /* UIKit.framework */; };
+		049D31E114EB14EE00780F2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049D31E014EB14EE00780F2F /* Foundation.framework */; };
+		049D31E314EB14EE00780F2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049D31E214EB14EE00780F2F /* CoreGraphics.framework */; };
+		049D31E914EB14EE00780F2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 049D31E714EB14EE00780F2F /* InfoPlist.strings */; };
+		049D31EB14EB14EE00780F2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 049D31EA14EB14EE00780F2F /* main.m */; };
+		049D31EF14EB14EE00780F2F /* UnoNoticiasAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 049D31EE14EB14EE00780F2F /* UnoNoticiasAppDelegate.m */; };
+		049D31F214EB14EE00780F2F /* UnoNoticiasMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049D31F114EB14EE00780F2F /* UnoNoticiasMasterViewController.m */; };
+		049D31F514EB14EE00780F2F /* UnoNoticiasDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049D31F414EB14EE00780F2F /* UnoNoticiasDetailViewController.m */; };
+		049D31F814EB14EE00780F2F /* UnoNoticiasMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D31F614EB14EE00780F2F /* UnoNoticiasMasterViewController.xib */; };
+		049D31FB14EB14EE00780F2F /* UnoNoticiasDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D31F914EB14EE00780F2F /* UnoNoticiasDetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		049D31DA14EB14EE00780F2F /* Split.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Split.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		049D31DE14EB14EE00780F2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		049D31E014EB14EE00780F2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		049D31E214EB14EE00780F2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		049D31E614EB14EE00780F2F /* Split-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Split-Info.plist"; sourceTree = "<group>"; };
+		049D31E814EB14EE00780F2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		049D31EA14EB14EE00780F2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		049D31EC14EB14EE00780F2F /* Split-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Split-Prefix.pch"; sourceTree = "<group>"; };
+		049D31ED14EB14EE00780F2F /* UnoNoticiasAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnoNoticiasAppDelegate.h; sourceTree = "<group>"; };
+		049D31EE14EB14EE00780F2F /* UnoNoticiasAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnoNoticiasAppDelegate.m; sourceTree = "<group>"; };
+		049D31F014EB14EE00780F2F /* UnoNoticiasMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnoNoticiasMasterViewController.h; sourceTree = "<group>"; };
+		049D31F114EB14EE00780F2F /* UnoNoticiasMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnoNoticiasMasterViewController.m; sourceTree = "<group>"; };
+		049D31F314EB14EE00780F2F /* UnoNoticiasDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnoNoticiasDetailViewController.h; sourceTree = "<group>"; };
+		049D31F414EB14EE00780F2F /* UnoNoticiasDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnoNoticiasDetailViewController.m; sourceTree = "<group>"; };
+		049D31F714EB14EE00780F2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UnoNoticiasMasterViewController.xib; sourceTree = "<group>"; };
+		049D31FA14EB14EE00780F2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UnoNoticiasDetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		049D31D714EB14EE00780F2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049D31DF14EB14EE00780F2F /* UIKit.framework in Frameworks */,
+				049D31E114EB14EE00780F2F /* Foundation.framework in Frameworks */,
+				049D31E314EB14EE00780F2F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		049D31CF14EB14EE00780F2F = {
+			isa = PBXGroup;
+			children = (
+				049D31E414EB14EE00780F2F /* Split */,
+				049D31DD14EB14EE00780F2F /* Frameworks */,
+				049D31DB14EB14EE00780F2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		049D31DB14EB14EE00780F2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				049D31DA14EB14EE00780F2F /* Split.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		049D31DD14EB14EE00780F2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				049D31DE14EB14EE00780F2F /* UIKit.framework */,
+				049D31E014EB14EE00780F2F /* Foundation.framework */,
+				049D31E214EB14EE00780F2F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		049D31E414EB14EE00780F2F /* Split */ = {
+			isa = PBXGroup;
+			children = (
+				049D31ED14EB14EE00780F2F /* UnoNoticiasAppDelegate.h */,
+				049D31EE14EB14EE00780F2F /* UnoNoticiasAppDelegate.m */,
+				049D31F014EB14EE00780F2F /* UnoNoticiasMasterViewController.h */,
+				049D31F114EB14EE00780F2F /* UnoNoticiasMasterViewController.m */,
+				049D31F314EB14EE00780F2F /* UnoNoticiasDetailViewController.h */,
+				049D31F414EB14EE00780F2F /* UnoNoticiasDetailViewController.m */,
+				049D31F614EB14EE00780F2F /* UnoNoticiasMasterViewController.xib */,
+				049D31F914EB14EE00780F2F /* UnoNoticiasDetailViewController.xib */,
+				049D31E514EB14EE00780F2F /* Supporting Files */,
+			);
+			path = Split;
+			sourceTree = "<group>";
+		};
+		049D31E514EB14EE00780F2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				049D31E614EB14EE00780F2F /* Split-Info.plist */,
+				049D31E714EB14EE00780F2F /* InfoPlist.strings */,
+				049D31EA14EB14EE00780F2F /* main.m */,
+				049D31EC14EB14EE00780F2F /* Split-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		049D31D914EB14EE00780F2F /* Split */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 049D31FE14EB14EE00780F2F /* Build configuration list for PBXNativeTarget "Split" */;
+			buildPhases = (
+				049D31D614EB14EE00780F2F /* Sources */,
+				049D31D714EB14EE00780F2F /* Frameworks */,
+				049D31D814EB14EE00780F2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Split;
+			productName = Split;
+			productReference = 049D31DA14EB14EE00780F2F /* Split.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		049D31D114EB14EE00780F2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Freezecode;
+			};
+			buildConfigurationList = 049D31D414EB14EE00780F2F /* Build configuration list for PBXProject "Split" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 049D31CF14EB14EE00780F2F;
+			productRefGroup = 049D31DB14EB14EE00780F2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				049D31D914EB14EE00780F2F /* Split */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		049D31D814EB14EE00780F2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049D31E914EB14EE00780F2F /* InfoPlist.strings in Resources */,
+				049D31F814EB14EE00780F2F /* UnoNoticiasMasterViewController.xib in Resources */,
+				049D31FB14EB14EE00780F2F /* UnoNoticiasDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		049D31D614EB14EE00780F2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049D31EB14EB14EE00780F2F /* main.m in Sources */,
+				049D31EF14EB14EE00780F2F /* UnoNoticiasAppDelegate.m in Sources */,
+				049D31F214EB14EE00780F2F /* UnoNoticiasMasterViewController.m in Sources */,
+				049D31F514EB14EE00780F2F /* UnoNoticiasDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		049D31E714EB14EE00780F2F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				049D31E814EB14EE00780F2F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		049D31F614EB14EE00780F2F /* UnoNoticiasMasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				049D31F714EB14EE00780F2F /* en */,
+			);
+			name = UnoNoticiasMasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		049D31F914EB14EE00780F2F /* UnoNoticiasDetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				049D31FA14EB14EE00780F2F /* en */,
+			);
+			name = UnoNoticiasDetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		049D31FC14EB14EE00780F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		049D31FD14EB14EE00780F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		049D31FF14EB14EE00780F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Split/Split-Prefix.pch";
+				INFOPLIST_FILE = "Split/Split-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		049D320014EB14EE00780F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Split/Split-Prefix.pch";
+				INFOPLIST_FILE = "Split/Split-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		049D31D414EB14EE00780F2F /* Build configuration list for PBXProject "Split" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049D31FC14EB14EE00780F2F /* Debug */,
+				049D31FD14EB14EE00780F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		049D31FE14EB14EE00780F2F /* Build configuration list for PBXNativeTarget "Split" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049D31FF14EB14EE00780F2F /* Debug */,
+				049D320014EB14EE00780F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 049D31D114EB14EE00780F2F /* Project object */;
+}

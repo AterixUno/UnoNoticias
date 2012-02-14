@@ -103,6 +103,7 @@
     [imgFondo setImage:fondo];
 }
 
+
 -(void) dealloc{
 
     if (imgFondo){
