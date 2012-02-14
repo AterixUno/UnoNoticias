@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BarraClimaView.h"
 
 @class MenuView;
 @class NoticiaCompletaView;
 @class BarraClimaView;
 
-@interface UnoNoticiasViewController : UIViewController{
+@interface UnoNoticiasViewController : UIViewController<BarraClimaViewDelegate>{
     BOOL primeraVes;
     MenuView *menu;
-    //NoticiaCompletaView *noticia;
 }
 
 @property (retain, nonatomic) IBOutlet UIImageView *imgDrag;

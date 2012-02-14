@@ -10,6 +10,7 @@
 #import "Constantes.h"
 
 @implementation BarraClimaView
+@synthesize delegate;
 
 -(id) initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -53,6 +54,7 @@
         [lblFecha setFont:[Constantes HelveticaNue:40]];
         [lblFecha setTextColor:[UIColor colorWithRed:26.0/255.0 green:117.0/255.0 blue:187.0/255.0 alpha:1]];
         [lblFecha setBackgroundColor:[UIColor clearColor]];
+        [lblFecha setUserInteractionEnabled:YES];
         [self addSubview:lblFecha];
     
     }
@@ -115,6 +117,15 @@
     CGContextDrawPath(context, kCGPathFillStroke);
     
 }
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+
+    UITouch *touch = [touches anyObject];
+    
+    if ([touch view] == lblFecha){
+        [delegate barraClimaClic:self];
+    }
+}
+
 -(void) dealloc{
     [imgTipoClima release];
     imgTipoClima = nil;
