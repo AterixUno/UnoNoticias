@@ -13,7 +13,7 @@
     UIImageView *imgFondo; /* Variable de tipo UIImageview que se guarda en una dirección de memoria por eso el * */
     UIImageView *imgnoticia;
     UILabel *lblTipoNoticia;
-    UILabel *lblResumen;
+    UILabel *lblResumen;           
 
 }
 

@@ -10,6 +10,11 @@
 
 @interface BotonSeccionaNoticaView : UIView{
     UILabel *lblFuente;
+    UILabel *lblTipoNoticia;
+    UILabel *lblTituloNoticia;
+    UILabel *lblComentarios;
+    UILabel *lblNoticia;
+    UIImageView *imgNoticia;
 }
 
 -(id) initWithFrame:(CGRect)frame Fuente:(NSString *) strFuente;
