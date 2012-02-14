@@ -11,8 +11,8 @@
 #import "UnoNoticiasAppDelegate.h"
 #import "MenuView.h"
 #import "NoticiaCompletaView.h"
-#import "BarraClimaView.h"
 #import "BotonSeccionaNoticaView.h"
+#import "ClimaView.h"
 
 @implementation UnoNoticiasViewController
 @synthesize imgDrag,scrollNoticias,barraClima;
@@ -58,6 +58,7 @@
     [noticia release];
     noticia = nil;
     
+    [barraClima setDelegate:self];
 }
 
 - (void)viewDidUnload
@@ -175,6 +176,15 @@
     
     configuracion = nil;
     primeraVes = FALSE;
+}
+
+-(void) barraClimaClic:(BarraClimaView *) _barraClima{
+    ClimaView *climaView = [[ClimaView alloc] initWithFrame:CGRectMake(_barraClima.frame.origin.x+15,_barraClima.frame.origin.y - 367, 407 , 367)];
+    [climaView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin];
+    [self.view addSubview:climaView];
+    [climaView release];
+    climaView = nil;
+    
 }
 
 -(void) dealloc{
