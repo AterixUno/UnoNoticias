@@ -47,18 +47,19 @@
     primeraVes = TRUE;
     
     [scrollNoticias setContentSize:CGSizeMake(scrollNoticias.frame.size.width, scrollNoticias.frame.size.height*2)];
-    
-    /*noticia = [[NoticiaCompletaView alloc] init];
-    [scrollNoticias addSubview:noticia];
-    [noticia actualizarVista];*/
-    
-    BotonSeccionaNoticaView *noticia =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(0, 0, scrollNoticias.frame.size.width*3/5, scrollNoticias.frame.size.height) Fuente:@"Fuente: EFE" Foto:[UIImage imageNamed:@"concordiaMediano.jpg"]];
+
+    BotonSeccionaNoticaView *noticia =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(0, 0, scrollNoticias.frame.size.width*3/5, scrollNoticias.frame.size.height) Fuente:@"México D.F., viernes 20 de Enero, 2012" Foto:[UIImage imageNamed:@"concordiaMediano.jpg"] Relacionadas:@"24 NOTICIAS"];
     [noticia setBackgroundColor:[UIColor clearColor]];
+    [noticia setTipoNoticia:@"INTERNACIONAL"];
+    [noticia setTitulo:@"Suspenden de nuevo búsqueda de desaparecidos en crucero"];
+    [noticia setNoticia:@"La búsqueda de la veintena de desaparecidos en el naufragio del \"Costa Concordia\", ocurrido el pasado ciernes frente a la isla italiana de Giglio, se suspendio debido a que los movimientos continuos del crucero ponen en"];
+    [noticia setComentarios:@"2"];
+    [noticia setTamano:48];
     [scrollNoticias addSubview:noticia];
     [noticia release];
     noticia = nil;
 
-    BotonSeccionaNoticaView *noticia1 =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(scrollNoticias.frame.size.width*3/5, 0, scrollNoticias.frame.size.width*2/5, scrollNoticias.frame.size.height/2) Fuente:nil Foto:[UIImage imageNamed:@"energiaautosustentable.jpg"]];
+    BotonSeccionaNoticaView *noticia1 =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(scrollNoticias.frame.size.width*3/5, 0, scrollNoticias.frame.size.width*2/5, scrollNoticias.frame.size.height/2) Fuente:nil Foto:[UIImage imageNamed:@"energiaautosustentable.jpg" ] Relacionadas:nil];
     [noticia1 setBackgroundColor:[UIColor clearColor]];
     [noticia1 setTipoNoticia:@"NACIONAL"];
     [noticia1 setTitulo:@"México transita hacia la energía autosustentable: Sener"];
@@ -68,12 +69,17 @@
     [scrollNoticias addSubview:noticia1];
     [noticia1 release];
     noticia1 = nil;
-
-    /*BotonSeccionaNoticaView *noticia2 =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(scrollNoticias.frame.size.width*3/5, scrollNoticias.frame.size.height/2, scrollNoticias.frame.size.width*2/5, scrollNoticias.frame.size.height/2) Fuente:nil];
+    
+    BotonSeccionaNoticaView *noticia2 =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(scrollNoticias.frame.size.width*3/5, scrollNoticias.frame.size.height/2, scrollNoticias.frame.size.width*2/5, scrollNoticias.frame.size.height/2) Fuente:nil Foto:[UIImage imageNamed:@"chicagovswizards.jpg"] Relacionadas:nil];
     [noticia2 setBackgroundColor:[UIColor clearColor]];
+    [noticia2 setTipoNoticia:@"DEPORTES"];
+    [noticia2 setTitulo:@"Chicago retomó la senda de la victoria venciendo a Wizards"];
+    [noticia2 setNoticia:@"Rose encestó 10 de 20 tiros de campo y 14 de 15 tiros libres para acumular 35 puntos, su mayor"];
+    [noticia2 setComentarios:@"15"];
+    [noticia2 setTamano:26];
     [scrollNoticias addSubview:noticia2];
     [noticia2 release];
-    noticia2 = nil;*/
+    noticia2 = nil;
     
     [barraClima setDelegate:self];
 }

@@ -10,15 +10,20 @@
 
 @interface BotonSeccionaNoticaView : UIView{
     UILabel *lblFuente;
+    UILabel *lblEFE;
     UILabel *lblTipoNoticia;
     UILabel *lblTituloNoticia;
+    UILabel *lblTotalComentarios;
     UILabel *lblComentarios;
     UILabel *lblNoticia;
+    UILabel *lblRelacionadas;
+    UILabel *lblTotalRelacionadas;
     UIImageView *imgNoticia;
     UIImageView *imgComentarios;
+    UIImageView *imgRelacionadas;
 }
 
--(id) initWithFrame:(CGRect)frame Fuente:(NSString *) strFuente Foto:(UIImage *) foto;
+-(id) initWithFrame:(CGRect)frame Fuente:(NSString *) strFuente Foto:(UIImage *) foto Relacionadas:(NSString *) strRelacionadas;
 -(void) setTipoNoticia:(NSString *) tipoNoticia;
 -(void) setTitulo:(NSString *) titulo;
 -(void) setComentarios:(NSString *) comentarios;
