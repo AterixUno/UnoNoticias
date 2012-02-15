@@ -20,6 +20,7 @@
     [_window release];
     [_viewController release];
     [menu release];
+    [menuController release];
     [super dealloc];
 }
 
@@ -32,8 +33,6 @@
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
-    NSLog(@"%@",[UIFont familyNames]);
     
     [[UIApplication sharedApplication] setStatusBarHidden:TRUE];
     
@@ -80,24 +79,12 @@
 }
 
 -(void) ponerMenu:(UIView *) view{
-    UIView *superView = [menu superview];
-    if (!superView || superView != view){
-        [view addSubview:menu];
-    }
-}
-
--(MenuView *) menu{
     
-    if (!menu){
-        CGRect frame;
-        frame = self.viewController.view.frame;
-        frame.origin.y=-frame.size.height;
-        menu = [[MenuView alloc] initWithFrame:frame];
+    if(!menuController){
+        menuController = [[MenuViewController alloc] init];
     }
-    
-    return menu;
+    [menuController agregarVistas:view];
+
 }
-
-
 
 @end

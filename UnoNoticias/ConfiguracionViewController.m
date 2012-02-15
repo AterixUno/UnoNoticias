@@ -9,16 +9,15 @@
 #import "ConfiguracionViewController.h"
 #import "UnoNoticiasAppDelegate.h"
 #import "MenuView.h"
+#import "SeccionesView.h"
 
 @implementation ConfiguracionViewController
-@synthesize imgDrag;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        menu = [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] menu];
-        
+
     }
     return self;
 }
@@ -27,7 +26,7 @@
 
     self = [super initWithNibName:@"ConfiguracionViewController" bundle:[NSBundle mainBundle]];
     if (self) {
-        menu = [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] menu];
+        [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] ponerMenu:self.view];
     }
     return self;
     
@@ -58,21 +57,15 @@
     
     [super viewDidLoad];
     
-    UIPanGestureRecognizer *drag = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(drag:)];
-    [drag setMaximumNumberOfTouches:1];
-    [drag setMinimumNumberOfTouches:1];
-    [imgDrag addGestureRecognizer:drag];
-    [drag release];
+    if (!secciones) {
+        secciones = [[SeccionesView alloc] initWithFrame:CGRectMake(269, 162, 755, 586)];  
+    }
+    [self.view addSubview:secciones];
     
-    [self.view addSubview:menu];
-    
-    
-
 }
 
 - (void)viewDidUnload
 {
-    [self setImgDrag:nil];
     [super viewDidUnload];
 
 }
@@ -90,68 +83,17 @@
 }
 
 - (IBAction)goBack:(id)sender {
-    [menu removeFromSuperview];
     [self dismissModalViewControllerAnimated:YES];
 }
 
--(void)drag:(UIPanGestureRecognizer *) sender
-{
-    
-    CGPoint point;
-    float velocidad;
-    static CGPoint start;
-    
-    if ([sender state] == UIGestureRecognizerStateBegan)
-    {
-        start = [[sender view] center];
-        [imgDrag setCenter:start];
-        [menu setFrame:CGRectMake(menu.frame.origin.x,imgDrag.frame.origin.y - menu.frame.size.height, menu.frame.size.width, menu.frame.size.height)];
-    }
-    
-    point = [sender translationInView:[sender view]];
-    point.x = start.x;
-    point.y += start.y;
-    
-    if ([sender state] == UIGestureRecognizerStateChanged)
-        
-    {
-        [imgDrag setCenter:point];
-        [menu setFrame:CGRectMake(menu.frame.origin.x,imgDrag.frame.origin.y - menu.frame.size.height, menu.frame.size.width, menu.frame.size.height)];
-    }
-    
-    if ([sender state] == UIGestureRecognizerStateEnded)
-    {
-        
-        velocidad = [sender velocityInView:[sender view]].y;
-        
-        if (velocidad < -1000){
-            point.y = imgDrag.frame.size.height / 2.0;
-        } 
-        
-        else if (velocidad > 1000){        
-            point.y = 748 - imgDrag.frame.size.height/2.0;        
-        }
-        
-        else if (point.y < 374){
-            point.y = imgDrag.frame.size.height / 2.0;
-        }
-        
-        else{
-            point.y = 748 - imgDrag.frame.size.height/2.0; 
-        }
-        
-        [UIView animateWithDuration:0.4 animations:^{
-            [imgDrag setCenter:point];
-            [menu setFrame:CGRectMake(menu.frame.origin.x,imgDrag.frame.origin.y - menu.frame.size.height, menu.frame.size.width, menu.frame.size.height)];    
-        }];
-        
-    }
-}
 
 -(void) dealloc{
 
-    [imgDrag release];
-    imgDrag = nil;
+    if (secciones){
+        [secciones release];
+        secciones = nil;
+    }
+    
     [super dealloc];
 }
 @end

@@ -87,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 10;
 }
 
 // Customize the appearance of table view cells.

@@ -7,17 +7,20 @@
 //  Prueba
 
 #import <UIKit/UIKit.h>
+#import "MenuViewController.h"
 
 @class UnoNoticiasViewController;
-@class MenuView;
+
 
 @interface UnoNoticiasAppDelegate : UIResponder <UIApplicationDelegate>{
     MenuView *menu;
+    
+    MenuViewController *menuController;
 }
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UnoNoticiasViewController *viewController;
+
 -(void) ponerMenu:(UIView *) view;
--(MenuView *) menu;
 
 @end
