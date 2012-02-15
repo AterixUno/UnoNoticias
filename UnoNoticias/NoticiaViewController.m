@@ -42,7 +42,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [scrollNoticia setContentSize:scrollNoticia.frame.size];
+    [scrollNoticia setContentSize:CGSizeMake(scrollNoticia.frame.size.width, scrollNoticia.frame.size.height*2)];
     // Do any additional setup after loading the view from its nib.
 }
 
