@@ -65,6 +65,7 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<bool key="IBUIPagingEnabled">YES</bool>
 					</object>
 					<object class="IBUIButton" id="277595666">
 						<reference key="NSNextResponder" ref="766721923"/>
@@ -72,7 +73,7 @@
 						<string key="NSFrame">{{3, 0}, {42, 37}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="679322561"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -109,29 +110,11 @@
 						<string key="NSFrame">{{0, 707}, {1280, 41}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC43OTYwNzg0MzE0IDAuNzk2MDc4NDMxNCAwLjc5NjA3ODQzMTQAA</bytes>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-					</object>
-					<object class="IBUIImageView" id="679322561">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{43, 0}, {116, 104}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="949740382"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">4</int>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">unomenu.png</string>
-						</object>
 					</object>
 				</array>
 				<string key="NSFrameSize">{1024, 748}</string>
@@ -172,14 +155,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">imgDrag</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="679322561"/>
-					</object>
-					<int key="connectionID">10</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">scrollNoticias</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="949740382"/>
@@ -212,7 +187,6 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="277595666"/>
 							<reference ref="818656422"/>
-							<reference ref="679322561"/>
 							<reference ref="750551159"/>
 							<reference ref="949740382"/>
 						</array>
@@ -221,11 +195,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
 						<reference key="object" ref="949740382"/>
-						<reference key="parent" ref="766721923"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">5</int>
-						<reference key="object" ref="679322561"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -252,7 +221,6 @@
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.CustomClassName">BarraClimaView</string>
@@ -290,17 +258,12 @@
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="barraClima">BarraClimaView</string>
-						<string key="imgDrag">UIImageView</string>
 						<string key="scrollNoticias">UIScrollView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="barraClima">
 							<string key="name">barraClima</string>
 							<string key="candidateClassName">BarraClimaView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="imgDrag">
-							<string key="name">imgDrag</string>
-							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="scrollNoticias">
 							<string key="name">scrollNoticias</string>
@@ -321,7 +284,6 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="abajo.png">{23, 20}</string>
 			<string key="fondogeneral.png">{1024, 278}</string>
-			<string key="unomenu.png">{116, 104}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>

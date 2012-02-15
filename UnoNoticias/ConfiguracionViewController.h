@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class MenuView;
+@class SeccionesView;
 @interface ConfiguracionViewController : UIViewController
 {
-    MenuView *menu;
+
+    SeccionesView *secciones;
 }
 
-@property (nonatomic, retain) IBOutlet UIImageView *imgDrag;
 - (IBAction)goBack:(id)sender;
--(void) drag:(UIPanGestureRecognizer *) sender;
 
 @end
