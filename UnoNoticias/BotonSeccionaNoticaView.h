@@ -21,6 +21,8 @@
     UIImageView *imgNoticia;
     UIImageView *imgComentarios;
     UIImageView *imgRelacionadas;
+    
+    UIView *contenedorView;
 }
 
 -(id) initWithFrame:(CGRect)frame Fuente:(NSString *) strFuente Foto:(UIImage *) foto Relacionadas:(NSString *) strRelacionadas;

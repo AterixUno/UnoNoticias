@@ -15,12 +15,11 @@
     UILabel *lblFecha;
     UILabel *lblCiudad;
     UIImageView *imgFondo;
-
+    
 }
 -(void) setTiempo:(UIImage *) tiempo;
 -(void) setTemperatura:(NSString *) temperatura;
 -(void) setFecha:(NSString *) fecha;
 -(void) setCiudad:(NSString *) ciudad;
 -(void) setFondo:(UIImage *) fondo;
--(void) btnCerrarClic;
 @end

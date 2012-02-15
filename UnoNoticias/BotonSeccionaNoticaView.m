@@ -22,27 +22,8 @@
 
 -(id) initWithFrame:(CGRect)frame Fuente:(NSString *) strFuente Foto:(UIImage *)foto Relacionadas:(NSString *) strRelacionadas{
     self = [super initWithFrame:frame];
+    NSInteger posY;
     if (self){
-    
-        if (strFuente || [strFuente isEqualToString:@""]){
-            lblFuente = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width * 1/3 + 2, 210, self.frame.size.width * 2/3 - 2, 20)];
-            [lblFuente setText:strFuente];
-            [lblFuente setTextAlignment:UITextAlignmentLeft];
-            [lblFuente setNumberOfLines:1];
-            [lblFuente setFont:[Constantes HelveticaNue:15]];
-            [lblFuente setBackgroundColor:[UIColor clearColor]];
-            [lblFuente setTextColor:[UIColor colorWithRed:0.30196 green:0.30196 blue:0.30196 alpha:1]];
-            [self addSubview:lblFuente];
-            
-            lblEFE = [[UILabel alloc] initWithFrame:CGRectMake(0, 210, self.frame.size.width * 1/3, 20)];
-            [lblEFE setText:@"Fuente: EFE"];
-            [lblEFE setTextAlignment:UITextAlignmentRight];
-            [lblEFE setNumberOfLines:1];
-            [lblEFE setFont:[Constantes HelveticaNue:15]];
-            [lblEFE setBackgroundColor:[UIColor clearColor]];
-            [lblEFE setTextColor:[UIColor colorWithRed:0.10196 green:0.45882 blue:0.73333 alpha:1]];
-            [self addSubview:lblEFE];
-        }
         
         lblTipoNoticia = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, self.frame.size.width, 20)];
         [lblTipoNoticia setTextAlignment:UITextAlignmentCenter];
@@ -55,25 +36,54 @@
         lblTituloNoticia = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.frame.size.width, 180)];
         [lblTituloNoticia setTextAlignment:UITextAlignmentCenter];
         [lblTituloNoticia setNumberOfLines:0];
-        [lblTituloNoticia setFont:[Constantes HelveticaNue:52]];
+        [lblTituloNoticia setFont:[Constantes HelveticaNueCondensed:52]];
         [lblTituloNoticia setBackgroundColor:[UIColor clearColor]];
         [lblTituloNoticia setShadowColor:[UIColor colorWithRed:0.72549 green:0.69804 blue:0.69804 alpha:1]];
         [lblTituloNoticia setShadowOffset:CGSizeMake(1, 1)];
         [lblTituloNoticia setTextColor:[UIColor blackColor]];
         [self addSubview:lblTituloNoticia];
+    
+        contenedorView = [[UIView alloc] initWithFrame:CGRectMake(0, 210, frame.size.width, frame.size.height-210)];
+        [contenedorView setBackgroundColor:[UIColor redColor]];
+        [self addSubview:contenedorView];
+        
+        posY = 0;
+        if (strFuente || [strFuente isEqualToString:@""]){
+            lblFuente = [[UILabel alloc] initWithFrame:CGRectMake(contenedorView.frame.size.width * 1/3 + 2, posY, contenedorView.frame.size.width * 2/3 - 2, 20)];
+            [lblFuente setText:strFuente];
+            [lblFuente setTextAlignment:UITextAlignmentLeft];
+            [lblFuente setNumberOfLines:1];
+            [lblFuente setFont:[Constantes HelveticaNue:15]];
+            [lblFuente setBackgroundColor:[UIColor clearColor]];
+            [lblFuente setTextColor:[UIColor colorWithRed:0.30196 green:0.30196 blue:0.30196 alpha:1]];
+            [contenedorView addSubview:lblFuente];
+            
+            lblEFE = [[UILabel alloc] initWithFrame:CGRectMake(0, posY, contenedorView.frame.size.width * 1/3, 20)];
+            [lblEFE setText:@"Fuente: EFE"];
+            [lblEFE setTextAlignment:UITextAlignmentRight];
+            [lblEFE setNumberOfLines:1];
+            [lblEFE setFont:[Constantes HelveticaNue:15]];
+            [lblEFE setBackgroundColor:[UIColor clearColor]];
+            [lblEFE setTextColor:[UIColor colorWithRed:0.10196 green:0.45882 blue:0.73333 alpha:1]];
+            [contenedorView addSubview:lblEFE];
+            posY = 30;
+        }
+        
+
         
         imgNoticia = [[UIImageView alloc] initWithImage:foto];
-        [imgNoticia setFrame:CGRectMake(10, 230, imgNoticia.frame.size.width, imgNoticia.frame.size.height)];
+        [imgNoticia setFrame:CGRectMake(10, posY, imgNoticia.frame.size.width, imgNoticia.frame.size.height)];
         [imgNoticia setContentMode:UIViewContentModeTopLeft];
-        [self addSubview:imgNoticia];
+        [contenedorView addSubview:imgNoticia];
+        posY += imgNoticia.frame.size.height;
         
         if (strRelacionadas || [strRelacionadas isEqualToString:@""]){
             imgRelacionadas = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"relacionadas.png"]];
-            [imgRelacionadas setFrame:CGRectMake(10, 230 + imgNoticia.frame.size.height - 40, imgRelacionadas.frame.size.width, imgRelacionadas.frame.size.height)];
+            [imgRelacionadas setFrame:CGRectMake(10, posY - 40, imgRelacionadas.frame.size.width, imgRelacionadas.frame.size.height)];
             [imgRelacionadas setContentMode:UIViewContentModeTopLeft];
-            [self addSubview:imgRelacionadas];
+            [contenedorView addSubview:imgRelacionadas];
             
-            lblRelacionadas = [[UILabel alloc] initWithFrame:CGRectMake(10, 230 + imgNoticia.frame.size.height - 40, 106, 32)];
+            lblRelacionadas = [[UILabel alloc] initWithFrame:CGRectMake(10,posY - 40, 106, 32)];
             [lblRelacionadas setText:@"RELACIONADAS"];
             [lblRelacionadas setTextAlignment:UITextAlignmentCenter];
             [lblRelacionadas setNumberOfLines:1];
@@ -82,24 +92,25 @@
             [lblRelacionadas setTextColor:[UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1]];
             [lblRelacionadas setShadowColor:[UIColor colorWithRed:0.42745 green:0.41569 blue:0.41569 alpha:1]];
             [lblRelacionadas setShadowOffset:CGSizeMake(1, 1)];
-            [self addSubview:lblRelacionadas];
+            [contenedorView addSubview:lblRelacionadas];
             
-            lblTotalRelacionadas = [[UILabel alloc] initWithFrame:CGRectMake(114, 230 + imgNoticia.frame.size.height - 40, 104, 32)];
+            lblTotalRelacionadas = [[UILabel alloc] initWithFrame:CGRectMake(114, posY - 40, 104, 32)];
             [lblTotalRelacionadas setText:strRelacionadas];
             [lblTotalRelacionadas setTextAlignment:UITextAlignmentCenter];
             [lblTotalRelacionadas setNumberOfLines:1];
             [lblTotalRelacionadas setFont:[Constantes HelveticaNue:13]];
             [lblTotalRelacionadas setBackgroundColor:[UIColor clearColor]];
             [lblTotalRelacionadas setTextColor:[UIColor whiteColor]];
-            [self addSubview:lblTotalRelacionadas];
+            [contenedorView addSubview:lblTotalRelacionadas];
         }
         
+        posY = 0;
         imgComentarios = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"comentarios.png"]];
-        [imgComentarios setFrame:CGRectMake(self.frame.size.width - imgComentarios.frame.size.width - 10, 230, imgComentarios.frame.size.width, imgComentarios.frame.size.height)];
+        [imgComentarios setFrame:CGRectMake(contenedorView.frame.size.width - imgComentarios.frame.size.width - 10, posY, imgComentarios.frame.size.width, imgComentarios.frame.size.height)];
         [imgComentarios setContentMode:UIViewContentModeTopLeft];
-        [self addSubview:imgComentarios];
+        [contenedorView addSubview:imgComentarios];
         
-        lblTotalComentarios = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 65, 230, 50, 30)];
+        lblTotalComentarios = [[UILabel alloc] initWithFrame:CGRectMake(contenedorView.frame.size.width - 65, posY, 50, 30)];
         [lblTotalComentarios setTextAlignment:UITextAlignmentRight];
         [lblTotalComentarios setNumberOfLines:0];
         [lblTotalComentarios setFont:[Constantes HelveticaNue:31]];
@@ -107,24 +118,30 @@
         [lblTotalComentarios setTextColor:[UIColor whiteColor]];
         [lblTotalComentarios setShadowColor:[UIColor colorWithRed:0.42745 green:0.41569 blue:0.41569 alpha:1]];
         [lblTotalComentarios setShadowOffset:CGSizeMake(1, 1)];
-        [self addSubview:lblTotalComentarios];
+        [contenedorView addSubview:lblTotalComentarios];
         
-        lblNoticia = [[UILabel alloc] initWithFrame:CGRectMake(imgNoticia.frame.size.width + 20, 285, self.frame.size.width - 30 - imgNoticia.frame.size.width, imgNoticia.frame.size.height - 40)];
-        [lblNoticia setTextAlignment:UITextAlignmentLeft];
-        [lblNoticia setNumberOfLines:0];
-        [lblNoticia setFont:[Constantes HelveticaNue:16]];
-        [lblNoticia setBackgroundColor:[UIColor clearColor]];
-        [lblNoticia setTextColor:[UIColor colorWithRed:0.30196 green:0.30196 blue:0.30196 alpha:1]];
-        [self addSubview:lblNoticia];
+        posY += lblTotalComentarios.frame.size.height + 3;
         
-        lblComentarios = [[UILabel alloc] initWithFrame:CGRectMake(imgNoticia.frame.size.width + 20, 260, self.frame.size.width - 30 - imgNoticia.frame.size.width, 15)];
+        lblComentarios = [[UILabel alloc] initWithFrame:CGRectMake(imgNoticia.frame.size.width + 20, posY, self.frame.size.width - 30 - imgNoticia.frame.size.width, 15)];
         [lblComentarios setTextAlignment:UITextAlignmentRight];
         [lblComentarios setText:@"COMENTARIOS"];
         [lblComentarios setNumberOfLines:0];
         [lblComentarios setFont:[Constantes HelveticaNue:13]];
         [lblComentarios setBackgroundColor:[UIColor clearColor]];
         [lblComentarios setTextColor:[UIColor colorWithRed:0.30196 green:0.30196 blue:0.30196 alpha:1]];
-        [self addSubview:lblComentarios];
+        [contenedorView addSubview:lblComentarios];
+        
+        posY += lblComentarios.frame.size.height + 3;
+        
+        lblNoticia = [[UILabel alloc] initWithFrame:CGRectMake(imgNoticia.frame.size.width + 20, posY, self.frame.size.width - 30 - imgNoticia.frame.size.width, imgNoticia.frame.size.height - 40)];
+        [lblNoticia setTextAlignment:UITextAlignmentLeft];
+        [lblNoticia setNumberOfLines:0];
+        [lblNoticia setFont:[Constantes HelveticaNue:16]];
+        [lblNoticia setBackgroundColor:[UIColor clearColor]];
+        [lblNoticia setTextColor:[UIColor colorWithRed:0.30196 green:0.30196 blue:0.30196 alpha:1]];
+        [contenedorView addSubview:lblNoticia];
+        
+
     }
     
     return self;
@@ -198,6 +215,9 @@
     
     [lblRelacionadas release];
     lblRelacionadas = nil;
+    
+    [contenedorView release];
+    contenedorView = nil;
     
     [super dealloc];
 }

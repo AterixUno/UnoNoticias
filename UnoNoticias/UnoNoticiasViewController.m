@@ -55,7 +55,7 @@
     [noticia setNoticia:@"La búsqueda de la veintena de desaparecidos en el naufragio del \"Costa Concordia\", ocurrido el pasado ciernes frente a la isla italiana de Giglio, se suspendio debido a que los movimientos continuos del crucero ponen en"];
     [noticia setComentarios:@"2"];
     [noticia setTamano:48];
-    [scrollNoticias addSubview:noticia];
+    //[scrollNoticias addSubview:noticia];
     [noticia release];
     noticia = nil;
 
@@ -69,7 +69,7 @@
     [scrollNoticias addSubview:noticia1];
     [noticia1 release];
     noticia1 = nil;
-    
+    /*
     BotonSeccionaNoticaView *noticia2 =[[BotonSeccionaNoticaView alloc] initWithFrame:CGRectMake(scrollNoticias.frame.size.width*3/5, scrollNoticias.frame.size.height/2, scrollNoticias.frame.size.width*2/5, scrollNoticias.frame.size.height/2) Fuente:nil Foto:[UIImage imageNamed:@"chicagovswizards.jpg"] Relacionadas:nil];
     [noticia2 setBackgroundColor:[UIColor clearColor]];
     [noticia2 setTipoNoticia:@"DEPORTES"];
@@ -79,7 +79,7 @@
     [noticia2 setTamano:26];
     [scrollNoticias addSubview:noticia2];
     [noticia2 release];
-    noticia2 = nil;
+    noticia2 = nil;*/
     
     [barraClima setDelegate:self];
 }
