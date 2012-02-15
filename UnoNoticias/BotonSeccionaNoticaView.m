@@ -26,6 +26,7 @@
     if (self){
         
         lblTipoNoticia = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, self.frame.size.width, 20)];
+        [lblTipoNoticia setText:@""];
         [lblTipoNoticia setTextAlignment:UITextAlignmentCenter];
         [lblTipoNoticia setNumberOfLines:0];
         [lblTipoNoticia setFont:[Constantes HelveticaNue:21]];
@@ -33,7 +34,8 @@
         [lblTipoNoticia setTextColor:[UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1]];
         [self addSubview:lblTipoNoticia];
         
-        lblTituloNoticia = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.frame.size.width, 180)];
+        lblTituloNoticia = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, self.frame.size.width, 20)];
+        [lblTipoNoticia setText:@""];
         [lblTituloNoticia setTextAlignment:UITextAlignmentCenter];
         [lblTituloNoticia setNumberOfLines:0];
         [lblTituloNoticia setFont:[Constantes HelveticaNueCondensed:52]];
@@ -41,10 +43,11 @@
         [lblTituloNoticia setShadowColor:[UIColor colorWithRed:0.72549 green:0.69804 blue:0.69804 alpha:1]];
         [lblTituloNoticia setShadowOffset:CGSizeMake(1, 1)];
         [lblTituloNoticia setTextColor:[UIColor blackColor]];
+        [lblTituloNoticia setLineBreakMode:UILineBreakModeWordWrap];
         [self addSubview:lblTituloNoticia];
     
-        contenedorView = [[UIView alloc] initWithFrame:CGRectMake(0, 210, frame.size.width, frame.size.height-210)];
-        [contenedorView setBackgroundColor:[UIColor redColor]];
+        contenedorView = [[UIView alloc] initWithFrame:CGRectMake(0, lblTituloNoticia.frame.size.height + 30, frame.size.width , frame.size.height-lblTituloNoticia.frame.size.height-lblTituloNoticia.frame.origin.y)];
+        [contenedorView setBackgroundColor:[UIColor clearColor]];
         [self addSubview:contenedorView];
         
         posY = 0;
@@ -66,10 +69,10 @@
             [lblEFE setBackgroundColor:[UIColor clearColor]];
             [lblEFE setTextColor:[UIColor colorWithRed:0.10196 green:0.45882 blue:0.73333 alpha:1]];
             [contenedorView addSubview:lblEFE];
-            posY = 30;
+            posY = 20;
         }
         
-
+        posY += 15;
         
         imgNoticia = [[UIImageView alloc] initWithImage:foto];
         [imgNoticia setFrame:CGRectMake(10, posY, imgNoticia.frame.size.width, imgNoticia.frame.size.height)];
@@ -104,7 +107,7 @@
             [contenedorView addSubview:lblTotalRelacionadas];
         }
         
-        posY = 0;
+        posY = 15;
         imgComentarios = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"comentarios.png"]];
         [imgComentarios setFrame:CGRectMake(contenedorView.frame.size.width - imgComentarios.frame.size.width - 10, posY, imgComentarios.frame.size.width, imgComentarios.frame.size.height)];
         [imgComentarios setContentMode:UIViewContentModeTopLeft];
@@ -133,7 +136,7 @@
         
         posY += lblComentarios.frame.size.height + 3;
         
-        lblNoticia = [[UILabel alloc] initWithFrame:CGRectMake(imgNoticia.frame.size.width + 20, posY, self.frame.size.width - 30 - imgNoticia.frame.size.width, imgNoticia.frame.size.height - 40)];
+        lblNoticia = [[UILabel alloc] initWithFrame:CGRectMake(imgNoticia.frame.size.width + 20, posY, contenedorView.frame.size.width - 30 - imgNoticia.frame.size.width, imgNoticia.frame.size.height + imgNoticia.frame.origin.y - posY)];
         [lblNoticia setTextAlignment:UITextAlignmentLeft];
         [lblNoticia setNumberOfLines:0];
         [lblNoticia setFont:[Constantes HelveticaNue:16]];
@@ -164,6 +167,14 @@
 
 -(void) setTitulo:(NSString *) titulo{
     [lblTituloNoticia setText:titulo];
+    CGRect frame;
+    frame = lblTituloNoticia.frame;
+     frame.size = [titulo sizeWithFont:[lblTituloNoticia font] constrainedToSize:CGSizeMake(lblTituloNoticia.frame.size.width, FLT_MAX)lineBreakMode:UILineBreakModeCharacterWrap];
+    
+    frame.size.width = self.frame.size.width;
+    [lblTituloNoticia setFrame:frame];
+    
+    [contenedorView setFrame:CGRectMake(0, lblTituloNoticia.frame.size.height + 35, self.frame.size.width, self.frame.size.height-lblTituloNoticia.frame.size.height-lblTituloNoticia.frame.origin.y)];
 }
 
 -(void) setComentarios:(NSString *) comentarios{
@@ -180,6 +191,7 @@
 
 -(void) setTamano:(NSInteger) tamano{
     [lblTituloNoticia setFont:[Constantes HelveticaNue:tamano]];
+    [self setTitulo:[lblTituloNoticia text]];
 }
 
 -(void) dealloc{
