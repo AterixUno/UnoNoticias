@@ -20,6 +20,15 @@
     return self;
 }
 
+-(id) init{
+    self = [super initWithNibName:@"NoticiaViewController" bundle:nil];
+    if (self){
+    
+    }
+    
+    return self;
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -54,5 +63,8 @@
 - (void)dealloc {
     [scrollNoticia release];
     [super dealloc];
+}
+- (IBAction)regesar:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

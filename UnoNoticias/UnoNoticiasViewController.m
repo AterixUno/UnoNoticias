@@ -11,8 +11,8 @@
 #import "UnoNoticiasAppDelegate.h"
 #import "MenuView.h"
 #import "NoticiaCompletaView.h"
-#import "BotonSeccionaNoticaView.h"
 #import "ClimaView.h"
+#import "NoticiaViewController.h"
 
 @implementation UnoNoticiasViewController
 @synthesize imgDrag,scrollNoticias,barraClima;
@@ -55,6 +55,7 @@
     [noticia setTitulo:@"Suspenden de nuevo búsqueda de desaparecidos en crucero"];
     [noticia setNoticia:@"La búsqueda de la veintena de desaparecidos en el naufragio del \"Costa Concordia\", ocurrido el pasado ciernes frente a la isla italiana de Giglio, se suspendio debido a que los movimientos continuos del crucero ponen en"];
     [noticia setComentarios:@"2"];
+    [noticia setDelegate:self];
     [scrollNoticias addSubview:noticia];
     [noticia release];
     noticia = nil;
@@ -66,6 +67,7 @@
     [noticia1 setNoticia:@"El secreatrio de economía aseguró qeu el programa implementado por FCH, alcanzará su objetivo en "];
     [noticia1 setComentarios:@"7"];
     [noticia1 setTamano:26];
+    [noticia1 setDelegate:self];
     [scrollNoticias addSubview:noticia1];
     [noticia1 release];
     noticia1 = nil;
@@ -77,6 +79,7 @@
     [noticia2 setNoticia:@"Rose encestó 10 de 20 tiros de campo y 14 de 15 tiros libres para acumular 35 puntos, su mayor"];
     [noticia2 setComentarios:@"15"];
     [noticia2 setTamano:26];
+    [noticia2 setDelegate:self];
     [scrollNoticias addSubview:noticia2];
     [noticia2 release];
     noticia2 = nil;
@@ -241,6 +244,13 @@
     }
     
     [menu willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+}
+
+-(void) BotonSeleleccionaNoticiaClic:(BotonSeccionaNoticaView *)botonSeleccionaNoticia{
+    NoticiaViewController *noticiaView = [[NoticiaViewController alloc] init];
+    [self presentModalViewController:noticiaView animated:YES];
+    [noticiaView release];
+    noticiaView = nil;
 }
 
 -(void) dealloc{

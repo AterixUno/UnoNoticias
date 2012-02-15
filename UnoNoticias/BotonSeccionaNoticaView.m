@@ -10,6 +10,7 @@
 #import "Constantes.h"
 
 @implementation BotonSeccionaNoticaView
+@synthesize delegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -194,6 +195,10 @@
     [self setTitulo:[lblTituloNoticia text]];
 }
 
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [delegate BotonSeleleccionaNoticiaClic:self];
+}
+
 -(void) dealloc{
     [lblFuente release];
     lblFuente = nil;
@@ -230,6 +235,8 @@
     
     [contenedorView release];
     contenedorView = nil;
+    
+    delegate = nil;
     
     [super dealloc];
 }

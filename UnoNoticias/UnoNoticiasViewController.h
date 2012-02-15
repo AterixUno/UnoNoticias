@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "BarraClimaView.h"
+#import "BotonSeccionaNoticaView.h";
 
 @class MenuView;
 @class NoticiaCompletaView;
 @class BarraClimaView;
 
-@interface UnoNoticiasViewController : UIViewController<BarraClimaViewDelegate>{
+@interface UnoNoticiasViewController : UIViewController<BarraClimaViewDelegate,BotonSeleccionaNoticiaDelegate>{
     BOOL primeraVes;
     MenuView *menu;
 }

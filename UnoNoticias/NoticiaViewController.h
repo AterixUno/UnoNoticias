@@ -10,5 +10,6 @@
 
 @interface NoticiaViewController : UIViewController
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollNoticia;
+- (IBAction)regesar:(id)sender;
 
 @end
