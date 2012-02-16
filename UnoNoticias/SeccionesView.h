@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CheckBoxView.h"
+#import "BotonSeccionView.h"
 
-@interface SeccionesView : UIView
+@interface SeccionesView : UIView{
+   
+    UIView *contenedorBotonesView;
+    BotonSeccionView *btnNacional;
+    BotonSeccionView *btnInternacional;
+    BotonSeccionView *btnFinanzas;
+    BotonSeccionView *btnEspectaculos;
+    BotonSeccionView *btnDeportes;
+    BotonSeccionView *btnBuenoContar;
+    BotonSeccionView *btnDenuncia;
+    
+}
 
 @end

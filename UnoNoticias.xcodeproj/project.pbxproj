@@ -184,6 +184,7 @@
 		0479D05114E42A9A00A61B50 /* regresar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479CFEC14E42A9A00A61B50 /* regresar.png */; };
 		0479D05214E42A9A00A61B50 /* twittergrande.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479CFED14E42A9A00A61B50 /* twittergrande.png */; };
 		0479D05314E42A9A00A61B50 /* unomenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479CFEE14E42A9A00A61B50 /* unomenu.png */; };
+		04E198EA14ED5F4E000664C9 /* BotonSeccionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E198E914ED5F4E000664C9 /* BotonSeccionView.m */; };
 		04E24F7F14EC35C4002B66C4 /* SeccionesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E24F7E14EC35C4002B66C4 /* SeccionesView.m */; };
 		04E24F8314EC3911002B66C4 /* CheckBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E24F8214EC3911002B66C4 /* CheckBoxView.m */; };
 		04E24F8614EC4B32002B66C4 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E24F8514EC4B31002B66C4 /* MenuViewController.m */; };
@@ -382,6 +383,8 @@
 		0479CFEC14E42A9A00A61B50 /* regresar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regresar.png; sourceTree = "<group>"; };
 		0479CFED14E42A9A00A61B50 /* twittergrande.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twittergrande.png; sourceTree = "<group>"; };
 		0479CFEE14E42A9A00A61B50 /* unomenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unomenu.png; sourceTree = "<group>"; };
+		04E198E814ED5F4E000664C9 /* BotonSeccionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotonSeccionView.h; sourceTree = "<group>"; };
+		04E198E914ED5F4E000664C9 /* BotonSeccionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotonSeccionView.m; sourceTree = "<group>"; };
 		04E24F7D14EC35C4002B66C4 /* SeccionesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeccionesView.h; sourceTree = "<group>"; };
 		04E24F7E14EC35C4002B66C4 /* SeccionesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeccionesView.m; sourceTree = "<group>"; };
 		04E24F8114EC3911002B66C4 /* CheckBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckBoxView.h; sourceTree = "<group>"; };
@@ -542,6 +545,8 @@
 				04E24F7E14EC35C4002B66C4 /* SeccionesView.m */,
 				04E24F8114EC3911002B66C4 /* CheckBoxView.h */,
 				04E24F8214EC3911002B66C4 /* CheckBoxView.m */,
+				04E198E814ED5F4E000664C9 /* BotonSeccionView.h */,
+				04E198E914ED5F4E000664C9 /* BotonSeccionView.m */,
 			);
 			path = UnoNoticias;
 			sourceTree = "<group>";
@@ -952,6 +957,7 @@
 				04E24F7F14EC35C4002B66C4 /* SeccionesView.m in Sources */,
 				04E24F8314EC3911002B66C4 /* CheckBoxView.m in Sources */,
 				04E24F8614EC4B32002B66C4 /* MenuViewController.m in Sources */,
+				04E198EA14ED5F4E000664C9 /* BotonSeccionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
