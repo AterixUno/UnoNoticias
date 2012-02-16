@@ -51,7 +51,7 @@
         size.height=self.frame.size.height;
         lblFecha = [[UILabel alloc] initWithFrame:CGRectMake(origin.x, origin.y, size.width, size.height)];
         [lblFecha setText:@"VIE 20"];
-        [lblFecha setFont:[Constantes HelveticaNue:40]];
+        [lblFecha setFont:[Constantes Helvetica67MediumCondensed:40]];
         [lblFecha setTextColor:[UIColor colorWithRed:26.0/255.0 green:117.0/255.0 blue:187.0/255.0 alpha:1]];
         [lblFecha setBackgroundColor:[UIColor clearColor]];
         [lblFecha setUserInteractionEnabled:YES];
@@ -66,7 +66,7 @@
         size.height=self.frame.size.height/2;
         lblTemperatura = [[UILabel alloc] initWithFrame:CGRectMake(origin.x, origin.y, size.width, size.height)];
         [lblTemperatura setText:@"20ºC"];
-        [lblTemperatura setFont:[Constantes HelveticaNue:19]];
+        [lblTemperatura setFont:[Constantes Helvetica67MediumCondensedOblique:19]];
         [lblTemperatura setTextColor:[UIColor blackColor]];
         [lblTemperatura setBackgroundColor:[UIColor clearColor]];
         [self addSubview:lblTemperatura];
@@ -79,7 +79,7 @@
         size.height=lblTemperatura.frame.size.height;
         lblCiudad = [[UILabel alloc] initWithFrame:CGRectMake(origin.x, origin.y, size.width, size.height)];
         [lblCiudad setText:@"D.F."];
-        [lblCiudad setFont:[Constantes HelveticaNueCondensed:16]];
+        [lblCiudad setFont:[Constantes Helvetica57CondensedOblique:17]];
         [lblTemperatura setTextColor:[UIColor blackColor]];
         [lblCiudad setBackgroundColor:[UIColor clearColor]];
         [self addSubview:lblCiudad];
@@ -112,7 +112,7 @@
     CGContextClosePath(context);
         
     [[UIColor blackColor] setFill];
-    [[UIColor colorWithRed:0.09411765 green:0.39607843 blue:0.49803922 alpha:1] setStroke];
+    [[UIColor colorWithRed:0.698039 green:0.698039 blue:0.698039 alpha:1] setStroke];
     
     CGContextDrawPath(context, kCGPathFillStroke);
     

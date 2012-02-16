@@ -25,7 +25,7 @@
         
         UILabel *lblTitulo = [[UILabel alloc] initWithFrame:CGRectMake(0, 13, frame.size.width, 30)];
         [lblTitulo setText:@"EL CLIMA"];
-        [lblTitulo setFont:[Constantes HelveticaNue:30]];
+        [lblTitulo setFont:[Constantes Helvetica67MediumCondensed:30]];
         [lblTitulo setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
         [lblTitulo setTextAlignment:UITextAlignmentCenter];
         [lblTitulo setBackgroundColor:[UIColor clearColor]];
@@ -40,7 +40,7 @@
         lblFecha = [[UILabel alloc] initWithFrame:CGRectMake(imgBusqueda.frame.size.width+imgBusqueda.frame.origin.x, imgBusqueda.frame.origin.y, frame.size.width-imgBusqueda.frame.size.width-imgBusqueda.frame.origin.x, imgBusqueda.frame.size.height)];
         [lblFecha setText:@"Martes 14 de Febrero, 2012  "];
         [lblFecha setBackgroundColor:[UIColor clearColor]];
-        [lblFecha setFont:[Constantes HelveticaNueCondensed:13]];
+        [lblFecha setFont:[Constantes Helvetica57Condensed:13]];
         [lblFecha setTextColor:[UIColor colorWithRed:0.27843137 green:0.27843137 blue:0.27843137 alpha:1]];
         [lblFecha setTextAlignment:UITextAlignmentRight];
         [self addSubview:lblFecha]; 

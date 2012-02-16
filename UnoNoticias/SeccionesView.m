@@ -19,9 +19,9 @@
         UILabel *lblTitulo = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 400, 30)];
         [lblTitulo setText:@"SECCIÓN DE SELECCIONES"];
         [lblTitulo setBackgroundColor:[UIColor clearColor]];
-        [lblTitulo setTextColor:[UIColor grayColor]];
+        [lblTitulo setTextColor:[UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1]];
         [lblTitulo setTextAlignment:UITextAlignmentLeft];
-        [lblTitulo setFont:[Constantes HelveticaNue:30]];
+        [lblTitulo setFont:[Constantes Helvetica77BoldCondensed:31]];
         [self addSubview:lblTitulo];
         [lblTitulo release];
         lblTitulo = nil;
@@ -38,7 +38,7 @@
         lblInstrucciones = nil;
         
         contenedorBotonesView = [[UIView alloc] initWithFrame:CGRectMake(0, 120, 500, 351)];
-        [contenedorBotonesView setBackgroundColor:[UIColor grayColor]];
+        [contenedorBotonesView setBackgroundColor:[UIColor colorWithRed:0.796078 green:0.796078 blue:0.796078 alpha:0.796078]];
         [self addSubview:contenedorBotonesView];
         
         btnNacional = [[BotonSeccionView alloc] initWithFrame:CGRectMake(0, 1, contenedorBotonesView.frame.size.width, 49)];
@@ -80,7 +80,6 @@
         [btnListo setImage:[UIImage imageNamed:@"botonListo"] forState:UIControlStateNormal];
         [self addSubview:btnListo];
         
-    
     }
     return self;
 }

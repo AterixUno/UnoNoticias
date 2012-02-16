@@ -27,4 +27,12 @@
 
 +(UIFont *) HelveticaNue:(NSInteger) size;
 +(UIFont *) HelveticaNueCondensed:(NSInteger)size;
+
++(UIFont *) Helvetica57Condensed:(NSInteger)size;
++(UIFont *) Helvetica57CondensedOblique:(NSInteger)size;
++(UIFont *) Helvetica77BoldCondensed:(NSInteger)size;
++(UIFont *) Helvetica67MediumCondensed:(NSInteger)size;
++(UIFont *) Helvetica67MediumCondensedOblique:(NSInteger)size;
+
+
 @end
