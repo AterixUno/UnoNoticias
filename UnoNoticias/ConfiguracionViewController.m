@@ -64,6 +64,7 @@
     
 }
 
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -73,8 +74,8 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-	//return YES;
-    return interfaceOrientation == UIInterfaceOrientationLandscapeRight;
+	return YES;
+    //return interfaceOrientation == UIInterfaceOrientationLandscapeRight;
 }
 
 - (void)viewDidAppear:(BOOL)animated
