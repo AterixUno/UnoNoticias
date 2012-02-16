@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UnoNoticiasAppDelegate.h"
 @interface NoticiaViewController : UIViewController
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollNoticia;
 - (IBAction)regesar:(id)sender;

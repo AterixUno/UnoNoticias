@@ -23,7 +23,7 @@
 -(id) init{
     self = [super initWithNibName:@"NoticiaViewController" bundle:nil];
     if (self){
-    
+        [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] ponerMenu:self.view];
     }
     
     return self;
