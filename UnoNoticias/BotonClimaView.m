@@ -25,7 +25,7 @@
         
         lblTemperatura = [[UILabel alloc] initWithFrame:CGRectMake(52, 0, 50, 52)];
         [lblTemperatura setText:@""];
-        [lblTemperatura setFont:[Constantes HelveticaNue:21]];
+        [lblTemperatura setFont:[Constantes Helvetica67MediumCondensedOblique:21]];
         [lblTemperatura setTextColor:[UIColor blackColor]];
         [lblTemperatura setBackgroundColor:[UIColor clearColor]];
         [lblTemperatura setTextAlignment:UITextAlignmentCenter];
@@ -33,7 +33,7 @@
         
         lblFecha = [[UILabel alloc] initWithFrame:CGRectMake(104, 0, 115, 52)];
         [lblFecha setText:@""];
-        [lblFecha setFont:[Constantes HelveticaNue:21]];
+        [lblFecha setFont:[Constantes Helvetica67MediumCondensed:21]];
         [lblFecha setTextColor:[UIColor colorWithRed:0.1019 green:0.4588 blue:0.73333 alpha:1]];
         [lblFecha setBackgroundColor:[UIColor clearColor]];
         [lblFecha setTextAlignment:UITextAlignmentCenter];
@@ -41,7 +41,7 @@
         
         lblCiudad = [[UILabel alloc] initWithFrame:CGRectMake(214, 0, 150, 52)];
         [lblCiudad setText:@""];
-        [lblCiudad setFont:[Constantes HelveticaNue:21]];
+        [lblCiudad setFont:[Constantes Helvetica57CondensedOblique:19]];
         [lblCiudad setTextColor:[UIColor colorWithRed:0.30196078 green:0.30196078 blue:0.30196078 alpha:1]];
         [lblCiudad setBackgroundColor:[UIColor clearColor]];
         [lblCiudad setTextAlignment:UITextAlignmentCenter];
@@ -73,7 +73,7 @@
     CGContextClosePath(context);
     
     [[UIColor whiteColor] setFill];
-    [[UIColor colorWithRed:0.7960 green:0.7960 blue:0.7960 alpha:1] setStroke];
+    [[UIColor colorWithRed:0.698039 green:0.698039 blue:0.698039 alpha:1] setStroke];
     
     CGContextDrawPath(context, kCGPathFillStroke);
     

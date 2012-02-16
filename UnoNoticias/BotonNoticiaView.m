@@ -26,7 +26,7 @@
         
         lblTipoNoticia = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, frame.size.width - 30, 15)];
         [lblTipoNoticia setText:@""];
-        [lblTipoNoticia setFont:[Constantes HelveticaNue:20]];
+        [lblTipoNoticia setFont:[Constantes Helvetica67MediumCondensed:22]];
         [lblTipoNoticia setBackgroundColor:[UIColor clearColor]];
         [lblTipoNoticia setTextColor:[UIColor blackColor]];
         [lblTipoNoticia setShadowColor:[UIColor colorWithRed:0.73725 green:0.69804 blue:0.69804 alpha:1]];
@@ -35,7 +35,7 @@
         
         lblResumen = [[UILabel alloc] initWithFrame:CGRectMake(10, 170, frame.size.width - 30, 45)];
         [lblResumen setText:@""];
-        [lblResumen setFont:[Constantes HelveticaNueCondensed:16]];
+        [lblResumen setFont:[Constantes Helvetica57Condensed:16]];
         [lblResumen setNumberOfLines:2];
         [lblResumen setBackgroundColor:[UIColor clearColor]];
         [lblResumen setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];

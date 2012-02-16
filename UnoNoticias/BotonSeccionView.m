@@ -7,6 +7,7 @@
 //
 
 #import "BotonSeccionView.h"
+#import "Constantes.h"
 
 @implementation BotonSeccionView
 
@@ -22,6 +23,8 @@
     
         lblSeccion = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, frame.size.width - 50, frame.size.height)];
         [lblSeccion setText:@""];
+        [lblSeccion setFont:[Constantes Helvetica67MediumCondensed:25]];
+        [lblSeccion setTextColor:[UIColor blackColor]];
         [self addSubview:lblSeccion];
         
         chbCheck = [[CheckBoxView alloc] initWithFrame:CGRectMake(frame.size.width - 50, 0, 50, frame.size.height)];

@@ -116,7 +116,7 @@
         
         lblPortada = [[UILabel alloc] initWithFrame:CGRectMake(0, 495, self.frame.size.width, 41)];
         [lblPortada setText:@"               PORTADA"];
-        [lblPortada setFont:[Constantes HelveticaNueCondensed:22]];
+        [lblPortada setFont:[Constantes Helvetica67MediumCondensed:22]];
         [lblPortada setNumberOfLines:1];
         [lblPortada setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
         [lblPortada setTextColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:1]];
@@ -124,7 +124,7 @@
         
         lblFecha = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 320, 495, 320, 41)];
         [lblFecha setText:@"México D.F., viernes 20 de Enero 2012"];
-        [lblFecha setFont:[Constantes HelveticaNueCondensed:16]];
+        [lblFecha setFont:[Constantes Helvetica57Condensed:16]];
         [lblFecha setNumberOfLines:1];
         [lblFecha setBackgroundColor:[UIColor clearColor]];
         [lblFecha setTextColor:[UIColor colorWithRed:0.59608 green:0.59608 blue:0.59608 alpha:1]];

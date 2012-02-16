@@ -26,11 +26,11 @@
     NSInteger posY;
     if (self){
         
-        lblTipoNoticia = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, self.frame.size.width, 20)];
+        lblTipoNoticia = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, self.frame.size.width, 30)];
         [lblTipoNoticia setText:@""];
         [lblTipoNoticia setTextAlignment:UITextAlignmentCenter];
         [lblTipoNoticia setNumberOfLines:0];
-        [lblTipoNoticia setFont:[Constantes HelveticaNue:21]];
+        [lblTipoNoticia setFont:[Constantes Helvetica67MediumCondensed:21]];
         [lblTipoNoticia setBackgroundColor:[UIColor clearColor]];
         [lblTipoNoticia setTextColor:[UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1]];
         [self addSubview:lblTipoNoticia];
@@ -39,7 +39,8 @@
         [lblTipoNoticia setText:@""];
         [lblTituloNoticia setTextAlignment:UITextAlignmentCenter];
         [lblTituloNoticia setNumberOfLines:0];
-        [lblTituloNoticia setFont:[Constantes HelveticaNueCondensed:52]];
+        [lblTituloNoticia setFont:[Constantes Helvetica77BoldCondensed:52]];
+        //[lblTipoNoticia setFont:[Constantes Helvetica67MediumCondensed:21]];
         [lblTituloNoticia setBackgroundColor:[UIColor clearColor]];
         [lblTituloNoticia setShadowColor:[UIColor colorWithRed:0.72549 green:0.69804 blue:0.69804 alpha:1]];
         [lblTituloNoticia setShadowOffset:CGSizeMake(1, 1)];
@@ -57,7 +58,7 @@
             [lblFuente setText:strFuente];
             [lblFuente setTextAlignment:UITextAlignmentLeft];
             [lblFuente setNumberOfLines:1];
-            [lblFuente setFont:[Constantes HelveticaNue:15]];
+            [lblFuente setFont:[Constantes Helvetica57CondensedOblique:15]];
             [lblFuente setBackgroundColor:[UIColor clearColor]];
             [lblFuente setTextColor:[UIColor colorWithRed:0.30196 green:0.30196 blue:0.30196 alpha:1]];
             [contenedorView addSubview:lblFuente];
@@ -66,7 +67,7 @@
             [lblEFE setText:@"Fuente: EFE"];
             [lblEFE setTextAlignment:UITextAlignmentRight];
             [lblEFE setNumberOfLines:1];
-            [lblEFE setFont:[Constantes HelveticaNue:15]];
+            [lblFuente setFont:[Constantes Helvetica57CondensedOblique:15]];
             [lblEFE setBackgroundColor:[UIColor clearColor]];
             [lblEFE setTextColor:[UIColor colorWithRed:0.10196 green:0.45882 blue:0.73333 alpha:1]];
             [contenedorView addSubview:lblEFE];
@@ -91,7 +92,7 @@
             [lblRelacionadas setText:@"RELACIONADAS"];
             [lblRelacionadas setTextAlignment:UITextAlignmentCenter];
             [lblRelacionadas setNumberOfLines:1];
-            [lblRelacionadas setFont:[Constantes HelveticaNue:13]];
+            [lblRelacionadas setFont:[Constantes Helvetica67MediumCondensed:14]];
             [lblRelacionadas setBackgroundColor:[UIColor clearColor]];
             [lblRelacionadas setTextColor:[UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1]];
             [lblRelacionadas setShadowColor:[UIColor colorWithRed:0.42745 green:0.41569 blue:0.41569 alpha:1]];
@@ -102,7 +103,7 @@
             [lblTotalRelacionadas setText:strRelacionadas];
             [lblTotalRelacionadas setTextAlignment:UITextAlignmentCenter];
             [lblTotalRelacionadas setNumberOfLines:1];
-            [lblTotalRelacionadas setFont:[Constantes HelveticaNue:13]];
+            [lblTotalRelacionadas setFont:[Constantes Helvetica67MediumCondensed:14]];
             [lblTotalRelacionadas setBackgroundColor:[UIColor clearColor]];
             [lblTotalRelacionadas setTextColor:[UIColor whiteColor]];
             [contenedorView addSubview:lblTotalRelacionadas];
@@ -117,7 +118,7 @@
         lblTotalComentarios = [[UILabel alloc] initWithFrame:CGRectMake(contenedorView.frame.size.width - 65, posY, 50, 30)];
         [lblTotalComentarios setTextAlignment:UITextAlignmentRight];
         [lblTotalComentarios setNumberOfLines:0];
-        [lblTotalComentarios setFont:[Constantes HelveticaNue:31]];
+        [lblTotalComentarios setFont:[Constantes Helvetica67MediumCondensed:31]];
         [lblTotalComentarios setBackgroundColor:[UIColor clearColor]];
         [lblTotalComentarios setTextColor:[UIColor whiteColor]];
         [lblTotalComentarios setShadowColor:[UIColor colorWithRed:0.42745 green:0.41569 blue:0.41569 alpha:1]];
@@ -130,7 +131,7 @@
         [lblComentarios setTextAlignment:UITextAlignmentRight];
         [lblComentarios setText:@"COMENTARIOS"];
         [lblComentarios setNumberOfLines:0];
-        [lblComentarios setFont:[Constantes HelveticaNue:13]];
+        [lblComentarios setFont:[Constantes Helvetica67MediumCondensed:13]];
         [lblComentarios setBackgroundColor:[UIColor clearColor]];
         [lblComentarios setTextColor:[UIColor colorWithRed:0.30196 green:0.30196 blue:0.30196 alpha:1]];
         [contenedorView addSubview:lblComentarios];
@@ -140,7 +141,7 @@
         lblNoticia = [[UILabel alloc] initWithFrame:CGRectMake(imgNoticia.frame.size.width + 20, posY, contenedorView.frame.size.width - 30 - imgNoticia.frame.size.width, imgNoticia.frame.size.height + imgNoticia.frame.origin.y - posY)];
         [lblNoticia setTextAlignment:UITextAlignmentLeft];
         [lblNoticia setNumberOfLines:0];
-        [lblNoticia setFont:[Constantes HelveticaNue:16]];
+        [lblNoticia setFont:[Constantes Helvetica57Condensed:16]];
         [lblNoticia setBackgroundColor:[UIColor clearColor]];
         [lblNoticia setTextColor:[UIColor colorWithRed:0.30196 green:0.30196 blue:0.30196 alpha:1]];
         [contenedorView addSubview:lblNoticia];
@@ -191,7 +192,7 @@
 }
 
 -(void) setTamano:(NSInteger) tamano{
-    [lblTituloNoticia setFont:[Constantes HelveticaNue:tamano]];
+    [lblTituloNoticia setFont:[Constantes Helvetica77BoldCondensed:tamano]];
     [self setTitulo:[lblTituloNoticia text]];
 }
 

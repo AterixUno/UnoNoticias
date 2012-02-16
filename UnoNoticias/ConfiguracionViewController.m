@@ -59,7 +59,7 @@
     [super viewDidLoad];
     
     if (!secciones) {
-        secciones = [[SeccionesView alloc] initWithFrame:CGRectMake(269, 162, 755, 586)];  
+        secciones = [[SeccionesView alloc] initWithFrame:CGRectMake(269, 162, 416, 586)];  
     }
     [self.view addSubview:secciones];
     
