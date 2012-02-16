@@ -192,8 +192,8 @@
 }
 
 -(void) setTamano:(NSInteger) tamano{
-    [self setTitulo:[lblTituloNoticia text]];
     [lblTituloNoticia setFont:[Constantes Helvetica77BoldCondensed:tamano]];
+    [self setTitulo:[lblTituloNoticia text]];
 }
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
