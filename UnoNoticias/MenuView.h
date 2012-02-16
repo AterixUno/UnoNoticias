@@ -24,6 +24,7 @@
 -(void) showMenu;
 -(void) hideMenu;
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
+-(void) configuracionClic;
 
 @end
 
@@ -31,5 +32,6 @@
 @optional
 
 -(void) MenuView:(MenuView *) menu Noticias:(NSNumber *) tag;
+-(void) configuracionClic;
 
 @end

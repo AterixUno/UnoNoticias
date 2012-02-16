@@ -27,6 +27,7 @@
     self = [super initWithNibName:@"ConfiguracionViewController" bundle:[NSBundle mainBundle]];
     if (self) {
         [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] ponerMenu:self.view];
+        [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] ponerMenuDelefate:nil];
     }
     return self;
     

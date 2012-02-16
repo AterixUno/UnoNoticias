@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "MenuView.h"
+
 @interface MenuViewController : NSObject{
     MenuView *menu;
     UIImageView *imgDrag;
-}
 
+}
 -(void) agregarVistas:(UIView *) view;
 -(void)drag:(UIPanGestureRecognizer *) sender;
+-(void) setMenuDelegate:(id<MenuViewDelegate>) delegate;
 
 @end

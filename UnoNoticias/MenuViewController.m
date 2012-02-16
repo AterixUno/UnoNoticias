@@ -99,6 +99,10 @@
     }
 }
 
+-(void) setMenuDelegate:(id<MenuViewDelegate>)delegate{
+    [menu setDelegate:delegate];
+}
+
 -(void) dealloc{
     [imgDrag release];
     [super dealloc];

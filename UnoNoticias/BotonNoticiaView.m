@@ -26,7 +26,7 @@
         
         lblTipoNoticia = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, frame.size.width - 30, 15)];
         [lblTipoNoticia setText:@""];
-        [lblTipoNoticia setFont:[Constantes HelveticaNueCondensed:22]];
+        [lblTipoNoticia setFont:[Constantes HelveticaNue:20]];
         [lblTipoNoticia setBackgroundColor:[UIColor clearColor]];
         [lblTipoNoticia setTextColor:[UIColor blackColor]];
         [lblTipoNoticia setShadowColor:[UIColor colorWithRed:0.73725 green:0.69804 blue:0.69804 alpha:1]];

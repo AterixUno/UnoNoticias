@@ -8,7 +8,6 @@
 
 #import "UnoNoticiasViewController.h"
 #import "ConfiguracionViewController.h"
-#import "UnoNoticiasAppDelegate.h"
 #import "MenuView.h"
 #import "NoticiaCompletaView.h"
 #import "ClimaView.h"
@@ -94,22 +93,22 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
+
     if (primeraVes){
         
-         ConfiguracionViewController *configuracion = [[ConfiguracionViewController alloc] init];
-         [self presentModalViewController:configuracion animated:NO];
-         [configuracion release];
-         configuracion = nil;
-         primeraVes = FALSE;
-     
-     }else{
-         
-         [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] ponerMenu:self.view]; 
-     }
-    
-
-
+        ConfiguracionViewController *configuracion = [[ConfiguracionViewController alloc] init];
+        [configuracion setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+        [self presentModalViewController:configuracion animated:NO];
+        [configuracion release];
+        configuracion = nil;
+        primeraVes = FALSE;
+        
+    }else{
+        
+        [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] ponerMenu:self.view];
+        [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] ponerMenuDelefate:self];
+        
+    }
     
 }
 
@@ -135,6 +134,7 @@
 
 - (IBAction)Configuracion:(id)sender {
     ConfiguracionViewController *configuracion = [[ConfiguracionViewController alloc] init];
+    [configuracion setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     [self presentModalViewController:configuracion animated:YES];
     [configuracion release];
     
@@ -186,9 +186,21 @@
 
 -(void) BotonSeleleccionaNoticiaClic:(BotonSeccionaNoticaView *)botonSeleccionaNoticia{
     NoticiaViewController *noticiaView = [[NoticiaViewController alloc] init];
+    [noticiaView setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     [self presentModalViewController:noticiaView animated:YES];
     [noticiaView release];
     noticiaView = nil;
+}
+
+
+-(void) configuracionClic{
+    
+    ConfiguracionViewController *configuracion = [[ConfiguracionViewController alloc] init];
+    [configuracion setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentModalViewController:configuracion animated:NO];
+    [configuracion release];
+    configuracion = nil;    
+
 }
 
 -(void) dealloc{

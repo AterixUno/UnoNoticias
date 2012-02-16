@@ -22,5 +22,6 @@
 @property (strong, nonatomic) UnoNoticiasViewController *viewController;
 
 -(void) ponerMenu:(UIView *) view;
+-(void) ponerMenuDelefate:(id<MenuViewDelegate>) delegate;
 
 @end

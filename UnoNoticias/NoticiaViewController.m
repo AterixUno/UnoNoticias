@@ -24,6 +24,7 @@
     self = [super initWithNibName:@"NoticiaViewController" bundle:nil];
     if (self){
         [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] ponerMenu:self.view];
+        [(UnoNoticiasAppDelegate *)[[UIApplication sharedApplication] delegate] ponerMenuDelefate:self];
     }
     
     return self;
@@ -58,6 +59,16 @@
 {
     // Return YES for supported orientations
 	return YES;
+}
+
+-(void) configuracionClic{
+    
+    ConfiguracionViewController *configuracion = [[ConfiguracionViewController alloc] init];
+    [configuracion setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentModalViewController:configuracion animated:NO];
+    [configuracion release];
+    configuracion = nil;    
+    
 }
 
 - (void)dealloc {

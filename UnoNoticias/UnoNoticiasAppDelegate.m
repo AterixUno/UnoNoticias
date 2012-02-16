@@ -87,4 +87,8 @@
 
 }
 
+-(void) ponerMenuDelefate:(id<MenuViewDelegate>) delegate{
+    [menuController setMenuDelegate:delegate];
+}
+
 @end

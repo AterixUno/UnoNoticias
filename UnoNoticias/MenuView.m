@@ -111,6 +111,7 @@
         UIButton *btnConfiguracion = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [btnConfiguracion setFrame:CGRectMake(20, 205, 220, 40)];
         [btnConfiguracion setTitle:@"Configuración" forState:UIControlStateNormal];
+        [btnConfiguracion addTarget:self action:@selector(configuracionClic) forControlEvents:UIControlEventTouchUpInside];
         [viewContenedor addSubview:btnConfiguracion];
         
         lblPortada = [[UILabel alloc] initWithFrame:CGRectMake(0, 495, self.frame.size.width, 41)];
@@ -169,6 +170,10 @@
             break;
     }
 
+}
+
+-(void) configuracionClic{
+    [delegate configuracionClic];
 }
 
 -(void) dealloc{

@@ -20,9 +20,11 @@
     self = [super initWithFrame:frame];
     if (self) {
         estaSeleccionado = TRUE;
+        [self setContentMode:UIViewContentModeCenter];
         [self setImage:[self imagenSeleccionada:estaSeleccionado]];
         [self setUserInteractionEnabled:TRUE];
         [self setContentMode:UIViewContentModeCenter];
+        [self setBackgroundColor:[UIColor clearColor]];
         
     }
     return self;
@@ -30,6 +32,7 @@
 
 -(void) awakeFromNib{
     estaSeleccionado = TRUE;
+    [self setContentMode:UIViewContentModeCenter];
     [self setImage:[self imagenSeleccionada:estaSeleccionado]];
     [self setUserInteractionEnabled:TRUE];
     [self setContentMode:UIViewContentModeCenter];
