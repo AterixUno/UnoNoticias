@@ -24,7 +24,7 @@
         [imgnoticia setContentMode:UIViewContentModeTop];
         [self addSubview:imgnoticia];
         
-        lblTipoNoticia = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, frame.size.width - 30, 15)];
+        lblTipoNoticia = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, frame.size.width - 30, 30)];
         [lblTipoNoticia setText:@""];
         [lblTipoNoticia setFont:[Constantes Helvetica67MediumCondensed:22]];
         [lblTipoNoticia setBackgroundColor:[UIColor clearColor]];
@@ -33,7 +33,7 @@
         [lblTipoNoticia setShadowOffset:CGSizeMake(1, 1)];
         [self addSubview:lblTipoNoticia];
         
-        lblResumen = [[UILabel alloc] initWithFrame:CGRectMake(10, 170, frame.size.width - 30, 45)];
+        lblResumen = [[UILabel alloc] initWithFrame:CGRectMake(10, 175, frame.size.width - 30, 45)];
         [lblResumen setText:@""];
         [lblResumen setFont:[Constantes Helvetica57Condensed:16]];
         [lblResumen setNumberOfLines:2];

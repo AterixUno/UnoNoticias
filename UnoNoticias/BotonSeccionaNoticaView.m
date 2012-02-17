@@ -40,7 +40,6 @@
         [lblTituloNoticia setTextAlignment:UITextAlignmentCenter];
         [lblTituloNoticia setNumberOfLines:0];
         [lblTituloNoticia setFont:[Constantes Helvetica77BoldCondensed:52]];
-        //[lblTipoNoticia setFont:[Constantes Helvetica67MediumCondensed:21]];
         [lblTituloNoticia setBackgroundColor:[UIColor clearColor]];
         [lblTituloNoticia setShadowColor:[UIColor colorWithRed:0.72549 green:0.69804 blue:0.69804 alpha:1]];
         [lblTituloNoticia setShadowOffset:CGSizeMake(1, 1)];
@@ -48,7 +47,7 @@
         [lblTituloNoticia setLineBreakMode:UILineBreakModeWordWrap];
         [self addSubview:lblTituloNoticia];
     
-        contenedorView = [[UIView alloc] initWithFrame:CGRectMake(0, lblTituloNoticia.frame.size.height + 30, frame.size.width , frame.size.height-lblTituloNoticia.frame.size.height-lblTituloNoticia.frame.origin.y)];
+        contenedorView = [[UIView alloc] initWithFrame:CGRectMake(0, lblTituloNoticia.frame.size.height + 25, frame.size.width , frame.size.height-lblTituloNoticia.frame.size.height-lblTituloNoticia.frame.origin.y)];
         [contenedorView setBackgroundColor:[UIColor clearColor]];
         [self addSubview:contenedorView];
         
@@ -67,7 +66,7 @@
             [lblEFE setText:@"Fuente: EFE"];
             [lblEFE setTextAlignment:UITextAlignmentRight];
             [lblEFE setNumberOfLines:1];
-            [lblFuente setFont:[Constantes Helvetica57CondensedOblique:15]];
+            [lblEFE setFont:[Constantes Helvetica57CondensedOblique:15]];
             [lblEFE setBackgroundColor:[UIColor clearColor]];
             [lblEFE setTextColor:[UIColor colorWithRed:0.10196 green:0.45882 blue:0.73333 alpha:1]];
             [contenedorView addSubview:lblEFE];
@@ -88,7 +87,7 @@
             [imgRelacionadas setContentMode:UIViewContentModeTopLeft];
             [contenedorView addSubview:imgRelacionadas];
             
-            lblRelacionadas = [[UILabel alloc] initWithFrame:CGRectMake(10,posY - 40, 106, 32)];
+            lblRelacionadas = [[UILabel alloc] initWithFrame:CGRectMake(10,posY - 35, 106, imgRelacionadas.frame.size.height)];
             [lblRelacionadas setText:@"RELACIONADAS"];
             [lblRelacionadas setTextAlignment:UITextAlignmentCenter];
             [lblRelacionadas setNumberOfLines:1];
@@ -99,7 +98,7 @@
             [lblRelacionadas setShadowOffset:CGSizeMake(1, 1)];
             [contenedorView addSubview:lblRelacionadas];
             
-            lblTotalRelacionadas = [[UILabel alloc] initWithFrame:CGRectMake(114, posY - 40, 104, 32)];
+            lblTotalRelacionadas = [[UILabel alloc] initWithFrame:CGRectMake(114, posY - 35, 104, imgRelacionadas.frame.size.height)];
             [lblTotalRelacionadas setText:strRelacionadas];
             [lblTotalRelacionadas setTextAlignment:UITextAlignmentCenter];
             [lblTotalRelacionadas setNumberOfLines:1];
@@ -115,7 +114,7 @@
         [imgComentarios setContentMode:UIViewContentModeTopLeft];
         [contenedorView addSubview:imgComentarios];
         
-        lblTotalComentarios = [[UILabel alloc] initWithFrame:CGRectMake(contenedorView.frame.size.width - 65, posY, 50, 30)];
+        lblTotalComentarios = [[UILabel alloc] initWithFrame:CGRectMake(contenedorView.frame.size.width - 65, posY + 4, 50, 35)];
         [lblTotalComentarios setTextAlignment:UITextAlignmentRight];
         [lblTotalComentarios setNumberOfLines:0];
         [lblTotalComentarios setFont:[Constantes Helvetica67MediumCondensed:31]];
@@ -176,7 +175,7 @@
     frame.size.width = self.frame.size.width;
     [lblTituloNoticia setFrame:frame];
     
-    [contenedorView setFrame:CGRectMake(0, lblTituloNoticia.frame.size.height + 35, self.frame.size.width, self.frame.size.height-lblTituloNoticia.frame.size.height-lblTituloNoticia.frame.origin.y)];
+    [contenedorView setFrame:CGRectMake(0, lblTituloNoticia.frame.size.height + 25, self.frame.size.width, self.frame.size.height-lblTituloNoticia.frame.size.height-lblTituloNoticia.frame.origin.y)];
 }
 
 -(void) setComentarios:(NSString *) comentarios{

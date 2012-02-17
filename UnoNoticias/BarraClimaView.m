@@ -55,6 +55,7 @@
         [lblFecha setTextColor:[UIColor colorWithRed:26.0/255.0 green:117.0/255.0 blue:187.0/255.0 alpha:1]];
         [lblFecha setBackgroundColor:[UIColor clearColor]];
         [lblFecha setUserInteractionEnabled:YES];
+        [lblFecha setTextAlignment:UITextAlignmentCenter];
         [self addSubview:lblFecha];
     
     }

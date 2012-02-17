@@ -98,21 +98,34 @@
         [btnDenuncia release];
         btnDenuncia = nil;
         
-        UIButton *btn200 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [btn200 setFrame:CGRectMake(20, 111, 220, 40)];
-        [btn200 setTitle:@"Noticias 200Km al rededor" forState:UIControlStateNormal];
+        UIImage *imgBtn200 = [UIImage imageNamed:@"boton200km.png"];
+        UIButton *btn200 = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn200 setFrame:CGRectMake(20, 105, imgBtn200.size.width, imgBtn200.size.height)];
+        [btn200 setContentMode:UIViewContentModeScaleToFill];
+        [btn200 setImage:imgBtn200 forState:UIControlStateNormal];
         [viewContenedor addSubview:btn200];
         
-        UIButton *btnSegimiento = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [btnSegimiento setFrame:CGRectMake(20, 158, 220, 40)];
-        [btnSegimiento setTitle:@"Noticias con seguimiento" forState:UIControlStateNormal];
-        [viewContenedor addSubview:btnSegimiento];
+        UIImage *imgBtnSeguimiento = [UIImage imageNamed:@"botonnoticiasseguimiento.png"];
+        UIButton *btnSeguimiento = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btnSeguimiento setFrame:CGRectMake(20, 153, imgBtnSeguimiento.size.width, imgBtnSeguimiento.size.height)];
+        [btnSeguimiento setContentMode:UIViewContentModeScaleToFill];
+        [btnSeguimiento setImage:imgBtnSeguimiento forState:UIControlStateNormal];
+        [viewContenedor addSubview:btnSeguimiento];
         
-        UIButton *btnConfiguracion = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [btnConfiguracion setFrame:CGRectMake(20, 205, 220, 40)];
-        [btnConfiguracion setTitle:@"Configuración" forState:UIControlStateNormal];
+        UIImage *imgBtnConfiguracion = [UIImage imageNamed:@"botonconfiguracion.png"];
+        UIButton *btnConfiguracion = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btnConfiguracion setFrame:CGRectMake(20, 201, imgBtnConfiguracion.size.width, imgBtnConfiguracion.size.height)];
+        [btnConfiguracion setImage:imgBtnConfiguracion forState:UIControlStateNormal];
+        [btnConfiguracion setContentMode:UIViewContentModeScaleToFill];
         [btnConfiguracion addTarget:self action:@selector(configuracionClic) forControlEvents:UIControlEventTouchUpInside];
         [viewContenedor addSubview:btnConfiguracion];
+        
+        UIImage *imgBtnBuscar = [UIImage imageNamed:@"busquedamenu.png"];
+        UIButton *btnBuscar = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btnBuscar setFrame:CGRectMake(20, 20, imgBtnBuscar.size.width, imgBtnBuscar.size.height)];
+        [btnBuscar setImage:imgBtnBuscar forState:UIControlStateNormal];
+        [btnBuscar setContentMode:UIViewContentModeScaleToFill];
+        [viewContenedor addSubview:btnBuscar];
         
         lblPortada = [[UILabel alloc] initWithFrame:CGRectMake(0, 495, self.frame.size.width, 41)];
         [lblPortada setText:@"               PORTADA"];
