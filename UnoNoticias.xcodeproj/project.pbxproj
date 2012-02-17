@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041F47A614EEC6C90039170F /* RedesSocialesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F47A514EEC6C90039170F /* RedesSocialesView.m */; };
+		041F47AA14EECF5D0039170F /* LogInUnoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F47A914EECF5D0039170F /* LogInUnoView.m */; };
 		0455CA1A14E998130008CD0E /* BotonSeccionaNoticaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455CA1914E998130008CD0E /* BotonSeccionaNoticaView.m */; };
 		0455CA8D14E9AA180008CD0E /* ClimaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455CA8C14E9AA180008CD0E /* ClimaView.m */; };
 		0455CA9214E9C7250008CD0E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0455CA9114E9C71E0008CD0E /* Default.png */; };
@@ -140,6 +142,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041F47A414EEC6C90039170F /* RedesSocialesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedesSocialesView.h; sourceTree = "<group>"; };
+		041F47A514EEC6C90039170F /* RedesSocialesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedesSocialesView.m; sourceTree = "<group>"; };
+		041F47A814EECF5D0039170F /* LogInUnoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInUnoView.h; sourceTree = "<group>"; };
+		041F47A914EECF5D0039170F /* LogInUnoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInUnoView.m; sourceTree = "<group>"; };
 		0455CA1814E998130008CD0E /* BotonSeccionaNoticaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotonSeccionaNoticaView.h; sourceTree = "<group>"; };
 		0455CA1914E998130008CD0E /* BotonSeccionaNoticaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotonSeccionaNoticaView.m; sourceTree = "<group>"; };
 		0455CA8B14E9AA180008CD0E /* ClimaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClimaView.h; sourceTree = "<group>"; };
@@ -373,6 +379,10 @@
 				04E24F8214EC3911002B66C4 /* CheckBoxView.m */,
 				04E198E814ED5F4E000664C9 /* BotonSeccionView.h */,
 				04E198E914ED5F4E000664C9 /* BotonSeccionView.m */,
+				041F47A414EEC6C90039170F /* RedesSocialesView.h */,
+				041F47A514EEC6C90039170F /* RedesSocialesView.m */,
+				041F47A814EECF5D0039170F /* LogInUnoView.h */,
+				041F47A914EECF5D0039170F /* LogInUnoView.m */,
 			);
 			path = UnoNoticias;
 			sourceTree = "<group>";
@@ -746,6 +756,8 @@
 				04E24F8314EC3911002B66C4 /* CheckBoxView.m in Sources */,
 				04E24F8614EC4B32002B66C4 /* MenuViewController.m in Sources */,
 				04E198EA14ED5F4E000664C9 /* BotonSeccionView.m in Sources */,
+				041F47A614EEC6C90039170F /* RedesSocialesView.m in Sources */,
+				041F47AA14EECF5D0039170F /* LogInUnoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

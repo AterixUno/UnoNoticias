@@ -10,6 +10,8 @@
 #import "UnoNoticiasAppDelegate.h"
 #import "MenuView.h"
 #import "SeccionesView.h"
+#import "RedesSocialesView.h"
+#import "LogInUnoView.h"
 
 @implementation ConfiguracionViewController
 
@@ -59,7 +61,7 @@
     [super viewDidLoad];
     
     if (!secciones) {
-        secciones = [[SeccionesView alloc] initWithFrame:CGRectMake(269, 162, 416, 586)];  
+        secciones = [[SeccionesView alloc] initWithFrame:CGRectMake(269, 162, 416, 550)];  
     }
     [self.view addSubview:secciones];
     
@@ -88,12 +90,69 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (IBAction)seccionesClic:(id)sender {
+    
+    [redesSociales removeFromSuperview];
+    [logInUno removeFromSuperview];
+    
+    if (!secciones) {
+        secciones = [[SeccionesView alloc] initWithFrame:CGRectMake(269, 162, 416, 550)];  
+    }
+    
+    if (![secciones superview]){
+        [self.view addSubview:secciones];
+    }
+}
+
+- (IBAction)redesClic:(id)sender {
+    
+    [secciones removeFromSuperview];
+    [logInUno removeFromSuperview];
+    
+    if (!redesSociales){
+        redesSociales = [[RedesSocialesView alloc] initWithFrame:CGRectMake(269, 162, 416, 550)];
+    }
+    
+    if (![redesSociales superview]){
+        [self.view addSubview:redesSociales];
+    }
+    
+}
+
+- (IBAction)registroClic:(id)sender {
+}
+
+- (IBAction)loginClic:(id)sender {
+
+    [secciones removeFromSuperview];
+    [redesSociales removeFromSuperview];
+    
+    if (!logInUno){
+        logInUno = [[LogInUnoView alloc] initWithFrame:CGRectMake(269, 162, 416, 550)];
+    }
+    
+    if (![logInUno superview]){
+        [self.view addSubview:logInUno];
+    }
+
+}
+
 
 -(void) dealloc{
 
     if (secciones){
         [secciones release];
         secciones = nil;
+    }
+    
+    if (redesSociales){
+        [redesSociales release];
+        redesSociales = nil;
+    }
+    
+    if (logInUno){
+        [logInUno release];
+        logInUno = nil;
     }
     
     [super dealloc];
