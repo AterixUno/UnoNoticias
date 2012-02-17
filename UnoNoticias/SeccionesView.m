@@ -16,7 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        UILabel *lblTitulo = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 400, 30)];
+        UILabel *lblTitulo = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 40)];
         [lblTitulo setText:@"SECCIÓN DE SELECCIONES"];
         [lblTitulo setBackgroundColor:[UIColor clearColor]];
         [lblTitulo setTextColor:[UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1]];
@@ -26,19 +26,20 @@
         [lblTitulo release];
         lblTitulo = nil;
         
-        UILabel *lblInstrucciones = [[UILabel alloc] initWithFrame:CGRectMake(0, 33, 500, 80)];
+        UILabel *lblInstrucciones = [[UILabel alloc] initWithFrame:CGRectMake(0, 37, frame.size.width, 80)];
         [lblInstrucciones setText:@"Selecciona deacuerdo a tus gustos las noticias que quieres revisar el día de hoy y las que quieres descartar. Al terminar has tap en listo."];
         [lblInstrucciones setBackgroundColor:[UIColor clearColor]];
         [lblInstrucciones setTextColor:[UIColor grayColor]];
         [lblInstrucciones setTextAlignment:UITextAlignmentLeft];
-        [lblInstrucciones setFont:[Constantes HelveticaNue:20]];
+        [lblInstrucciones setFont:[Constantes Helvetica57Condensed:21]];
         [lblInstrucciones setNumberOfLines:3];
         [self addSubview:lblInstrucciones];
         [lblInstrucciones release];
         lblInstrucciones = nil;
         
-        contenedorBotonesView = [[UIView alloc] initWithFrame:CGRectMake(0, 120, 500, 351)];
+        contenedorBotonesView = [[UIView alloc] initWithFrame:CGRectMake(0, 125, frame.size.width, 350)];
         [contenedorBotonesView setBackgroundColor:[UIColor colorWithRed:0.796078 green:0.796078 blue:0.796078 alpha:0.796078]];
+        [contenedorBotonesView setUserInteractionEnabled:YES];
         [self addSubview:contenedorBotonesView];
         
         btnNacional = [[BotonSeccionView alloc] initWithFrame:CGRectMake(0, 1, contenedorBotonesView.frame.size.width, 49)];
@@ -76,10 +77,10 @@
         [btnDenuncia setlblSeccion:@"Denuncia"];
         [contenedorBotonesView addSubview:btnDenuncia];
         
-        UIButton *btnListo = [[UIButton alloc] initWithFrame:CGRectMake(397,480 , 103, 42)];
+        UIButton *btnListo = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - 103,480 , 103, 42)];
         [btnListo setImage:[UIImage imageNamed:@"botonListo"] forState:UIControlStateNormal];
         [self addSubview:btnListo];
-        
+
     }
     return self;
 }
