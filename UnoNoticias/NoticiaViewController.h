@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "UnoNoticiasAppDelegate.h"
 #import "ConfiguracionViewController.h"
+#import "BarraClimaView.h"
+#import "ClimaView.h"
 
-@interface NoticiaViewController : UIViewController<MenuViewDelegate>
+@interface NoticiaViewController : UIViewController<MenuViewDelegate,BarraClimaViewDelegate>
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollNoticia;
 - (IBAction)regesar:(id)sender;
 

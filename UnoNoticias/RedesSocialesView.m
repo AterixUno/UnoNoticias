@@ -31,7 +31,7 @@
         
         imgFacebook = [UIImage imageNamed:@"facebookgrande.png"];
         imgTwitter = [UIImage imageNamed:@"twittergrande.png"];
-        imgGoogle = [UIImage imageNamed:@"googleGrande"];
+        imgGoogle = [UIImage imageNamed:@"googlegrande.png"];
         imgIn = [UIImage imageNamed:@"linkedingrande.png"];
         
         btnFacebook = [[UIButton alloc] initWithFrame:CGRectMake(0, 45, imgFacebook.size.width, imgFacebook.size.height)];

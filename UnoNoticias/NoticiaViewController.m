@@ -44,7 +44,9 @@
 {
     [super viewDidLoad];
     [scrollNoticia setContentSize:CGSizeMake(scrollNoticia.frame.size.width, scrollNoticia.frame.size.height*3)];
-    // Do any additional setup after loading the view from its nib.
+    BarraClimaView *barra = (BarraClimaView *)[self.view viewWithTag:99];
+    [barra setDelegate:self];
+    
 }
 
 - (void)viewDidUnload
@@ -68,6 +70,30 @@
     [self presentModalViewController:configuracion animated:NO];
     [configuracion release];
     configuracion = nil;    
+    
+}
+
+-(void) barraClimaClic:(BarraClimaView *) _barraClima{
+    ClimaView *climaView;
+    
+    climaView = (ClimaView *)[[self view] viewWithTag:100];
+    
+    if (climaView){
+        
+        [climaView removeFromSuperview];
+        
+    }
+    
+    else{
+        
+        climaView = [[ClimaView alloc] initWithFrame:CGRectMake(_barraClima.frame.origin.x+15,_barraClima.frame.origin.y - 367, 407 , 367)];
+        [climaView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin];
+        [climaView setTag:100];
+        [self.view addSubview:climaView];
+        [climaView release];
+        climaView = nil;
+        
+    }
     
 }
 

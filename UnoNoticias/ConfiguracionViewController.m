@@ -65,6 +65,8 @@
     }
     [self.view addSubview:secciones];
     
+
+    
 }
 
 
@@ -136,7 +138,6 @@
     }
 
 }
-
 
 -(void) dealloc{
 
