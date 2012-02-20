@@ -80,6 +80,8 @@
         UIButton *btnListo = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - 103,480 , 103, 42)];
         [btnListo setImage:[UIImage imageNamed:@"botonListo"] forState:UIControlStateNormal];
         [self addSubview:btnListo];
+        [btnListo release];
+        btnListo = nil;
 
     }
     return self;

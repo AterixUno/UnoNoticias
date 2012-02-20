@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogInUnoView : UIView{
-    
+@interface LogInUnoView : UIView<UITableViewDelegate,UITableViewDataSource>{
+    UITableView *tableLogin;
 }
 
 @end

@@ -22,6 +22,7 @@
         estaSeleccionado = TRUE;
         [self setContentMode:UIViewContentModeCenter];
         [self setImage:[self imagenSeleccionada:estaSeleccionado]];
+        [self setContentMode:UIViewContentModeCenter];
         [self setUserInteractionEnabled:TRUE];
         [self setContentMode:UIViewContentModeCenter];
         [self setBackgroundColor:[UIColor clearColor]];
